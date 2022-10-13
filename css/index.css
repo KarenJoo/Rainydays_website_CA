@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "JejuGothic";
+    src: url("../fonts/JejuGothic/jejugothic/JejuGothic-Regular.ttf") format("truetype");
+}
+
+body {
+    font-family: "JejuGothic", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+.logo {
+    font-family: "JejuGothic", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #F27712; 
+}

@@ -5,7 +5,10 @@
 }
 
 header {
-  background-color: #0a3641;
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+  color: #0a3641; /*hamburger-icon*/
 }
 
 body {
@@ -23,18 +26,9 @@ h1 {
   padding-left: 400px;
 }
 
-nav li {
-  display: inline-block;
-}
-
-a {
-  color: #fff;
+nav a {
+  display: block;
   text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-  text-decoration-color: #f27712;
 }
 
 /* Home page */
@@ -46,18 +40,76 @@ nav a:hover {
   height: 600px;
 }
 
-.shopmens {
+.shopmens_image {
   background-image: url("../images/menshop_resized.png");
   background-size: cover;
   background-repeat: no-repeat;
-  width: 550px;
-  height: 600px;
+  width: 450px;
+  height: 500px;
 }
 
-.shopwomens {
+.shopwomens_image {
   background-image: url("../images/womenshop_resized.png");
   background-size: cover;
   background-repeat: no-repeat;
-  width: 550px;
-  height: 600px;
+  width: 450px;
+  height: 500px;
+}
+
+.cta_big {
+  background-color: #f27712;
+  padding: 20px 110px 20px 100px;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* navigation */
+
+nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: #f27712;
+}
+nav,
+#menu-checkbox {
+  display: none;
+  padding: 5px;
+  position: absolute;
+  background-color: #fff;
+  padding: 20px 50px 50px 0px;
+}
+
+#menu-checkbox:checked ~ nav {
+  display: block;
+}
+nav a {
+  /*menuoptions*/
+  display: block;
+  color: #0a3641;
+  padding: 20px 10px 0px 50px;
+}
+@media (min-width: 600px) {
+  nav {
+    display: block;
+    position: static;
+  }
+
+  .hamburger-icon {
+    display: none;
+    font-size: 1rem;
+  }
+
+  nav a {
+    display: inline-block;
+  }
+
+  nav li {
+    display: inline-block;
+    padding: 10px 50px 5px 0px;
+    left: 50px;
+  }
+}
+
+.logo {
+  color: #f27712;
+  padding: 0px 200px 10px;
 }

@@ -31,13 +31,38 @@ nav a {
   text-decoration: none;
 }
 
-/* Home page */
+/* Home page__Hero */
 .hero {
   background: url("../images/hero1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 600px;
+  background-position-x: right;
+  background-position-y: bottom;
+  min-height: 80vh;
+  position: relative;
+}
+
+.welcome__hero {
+  position: relative;
+  top: 60px;
+  font-size: 12px;
+  padding: 10px 80px 0px 500px;
+}
+
+h3 {
+  margin: 10px 20px 100px 10px;
+  color: #0a3641;
+  font-size: 15px;
+}
+
+.positioned {
+  top: 400px;
+  right: 230px;
+}
+
+/* Home page__products men*/
+.shopmen {
+  padding: 400px 10px 100px 150px;
 }
 
 .shopmens_image {
@@ -48,6 +73,16 @@ nav a {
   height: 500px;
 }
 
+.fixed-position-men {
+  position: relative;
+  left: 100px;
+}
+
+/* Home page__products women*/
+.shopwomen {
+  padding: 400px 10px 10px 120px;
+}
+
 .shopwomens_image {
   background-image: url("../images/womenshop_resized.png");
   background-size: cover;
@@ -56,11 +91,36 @@ nav a {
   height: 500px;
 }
 
+.fixed-position-women {
+  position: relative;
+  bottom: 500px;
+  left: 590px;
+}
+
+/* Home page__products all*/
+.shopall {
+  padding: 400px 10px 10px 250px;
+}
+.shopall_image {
+  background-image: url("../images/alljackets.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 860px;
+  height: 500px;
+}
+
+.fixed-position-all {
+  position: relative;
+  bottom: 460px;
+  left: 180px;
+}
+
 .cta_big {
   background-color: #f27712;
-  padding: 20px 110px 20px 100px;
+  padding: 20px 80px 15px 100px;
   text-decoration: none;
   color: #fff;
+  position: absolute;
 }
 
 /* navigation */

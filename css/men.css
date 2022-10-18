@@ -124,8 +124,32 @@ nav a {
 .cta_small {
   background-color: #f27712;
   padding: 15px 30px 10px 25px;
-  position: absolute; 
+  position: absolute;
   font-size: 0.8rem;
   text-decoration: none;
   color: #fff;
+}
+
+.product1 {
+  padding: 0px 0px 0px 0px;
+  display: block;
+}
+
+.product2 {
+  padding: 0px 20px 10px 250px;
+  display: block;
+}
+
+.floated {
+  float: left;
+}
+
+section::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.positioned{
+  top: 100px;
 }

@@ -7,52 +7,180 @@
 
 header {
   position: relative;
- background-color: #FFF;
-  color: #0a3641;  
-                    
+  color: #0a3641;
+  background-color: #FFF;
+  margin: 0;
+  padding: 0;
+
 }
 
 header a {     /*links in header*/
-  color:#0a3641;
-}
-
-.cta-button {
-  background-color: #f27712;
-  color:#FFF; 
-  font-size: 1.3em;
-}
-
-body {
-  font-family: "JejuGothic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #FFF;
+  text-decoration: none;
+  background-color: #0a3641;
+  padding: 10px 40px 10px 10px;
+  
 }
 
 
+a:hover {
+  color:#f27712;
+}
+
+.current {
+  color:#f27712
+}
+
+/*navigation small screen*/
+
+nav,
+#menu-checkbox {   /*hamburger hidden menu*/
+  display: none; 
+  position: absolute;
+  background: #0a3641; 
+  z-index: 1;
+  
+}
+
+
+
+#menu-checkbox:checked  ~ nav {
+  display:block;
+  
+}
 
 nav a {
   display: block;
   color: #FFF
   text-decoration: none;
+
 }
 
-/* Home page */
-.hero__image {
-  background: url("../images/hero1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+
+
+
+/*navigation desktop*/
+@media (min-width: 600px) {
+  nav {
+    display: block;
+    position: static;
+    order: 1
+    overflow: auto;
+    width: 100%;
+    
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  nav a {
+  display: block;
   width: 100%;
-  height: 600px;
-}
-
-.shop {  /*featured*/
-
 
 }
+
+nav li{
+  display: inline-block;
+
+}
+
+}
+
+
+
+/*Home page - hero*/
+
+.hero {
+background-image: url("../images/hero1.jpg");
+background-size: cover;
+position: relative; 
+min-height: 700px;  
+min-width: 100%;
+}
+
+.hero__content {
+  position: absolute;
+  top: 100px;
+  left: 500px; 
+}
+
+h1 {
+  font-size: 50px;;
+  color: #f27712;
+  padding-left: 400px;
+}
+
+h2 {
+  font-size: 0.8rem;
+  color:#0a3641;
+  margin: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.cta__shop,
+.cta {
+  background-color: #f27712;
+  color:#FFF; 
+  text-decoration: none;
+  font-size: 1.0em;
+  padding: 15px 50px 15px 50px;
+ 
+}
+
+.shop {
+top: 100px; 
+right: 100px; 
+}
+
+.cta__shop__position {
+  top: 100px 30px 10px 10px;
+}
+body {
+  font-family: "JejuGothic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*mens productlist*/
+
+.flex-products {
+  display: flex;
+  min-width: 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.flex-jacket {
+  background-color: #FFF; 
+  width: 300px;
+  height: 500px;
+  border-style:groove;
+  border-color: #0a36411c;
+}
+
+.image {
+padding: 10px 10px 10px 10px; 
+}
+
+.view-button {
+ padding: 15px 50px 15px 50px;
+margin-top: auto; 
+margin-left: 40px; 
+right: 50px; 
+top: 10px; 
+text-align: center;
+}
+
+.product-info {
+  display: flex;
+}
+
 footer{
   color:#0a3641; 
   text-align: center; 
 }
 
-/* navigation */
+
 
 
 

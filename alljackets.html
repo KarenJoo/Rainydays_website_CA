@@ -1,36 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Rainydays | Home</title>
-    <meta name="description" content="The view all jackets page of Rainydays." />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The homepage of Rainydays." />
     <link href="/css/index.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/24a3a1119c.js"
       crossorigin="anonymous"
     ></script>
-    <link href="/css/index.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <title>Rainydays | Home</title>
   </head>
   <body>
-    <header>
-      <a href="index.html" class="logo">Home</a>
+    <header class="logobar">
       <input type="checkbox" id="menu-checkbox" />
       <label for="menu-checkbox" class="hamburger-icon"
-        ><i class="fas fa-bars"></i
+        ><i class="fa fa-bars"></i
       ></label>
-      <nav>
-        <a href="men.html">MEN</a>
-        <a href="women.html">WOMEN</a>
-        <a href="alljackets.html" class="current">VIEW ALL</a>
-        <a href="aboutus.html">ABOUT US</a>
-        <a href="contact.html">CONTACT</a>
+      <ul></ul>
+      <nav class="navbar-big">
+        <div>
+          <a href="index.html"
+            ><img class="navlogo" src="/images/RainyDays_logo1.png"
+          /></a>
+        </div>
+        <ul>
+          <li><a class="logobar" href="men.html">MEN</a></li>
+          <li><a class="logobar" href="women.html">WOMEN</a></li>
+          <li><a class="logobar" href="alljackets.html">VIEW ALL</a></li>
+          <li><a class="logobar" href="aboutus.html">ABOUT US</a></li>
+          <li><a class="logobar" href="contact.html">CONTACT</a></li>
+        </ul>
       </nav>
     </header>
     <main>
-      <section class="viewall_men"></section>
-      <h1>VIEW ALL JACKETS</h1>
-      <section class="viewall_women"></section>
+      <section class="hero herobig"></section>
+        <h1>ALL JACKETS</h1>
+      <div class="flex-products">
+          <div class="flex-jacket">
+            <div class="image">
+              <img src="/images/RainyDays_1jacketsmall.jpg" alt="orange jacket for men">
+            </div>
+            <div class="product-info">
+              <h2>This is product information about the orange jacket.</h2>
+            </div>
+          <a href="spesific-men.html" class="cta view-button">VIEW JACKET</a>
+        </div>
+       
+        <div class="flex-jacket">
+          <h2>1 Black jacket</h2>
+          <a href="viewjacket.html" class="cta view-button">VIEW JACKET</a></div>
+          <div class="flex-jacket">
+            <h2>2 Black jacket</h2>
+            <a href="viewjacket.html" class="cta view-button">VIEW JACKET</a></div>
+            <div class="flex-jacket">
+              <h2>3 Black jacket</h2>
+              <a href="viewjacket.html" class="cta view-button">VIEW JACKET</a></div>
+              <div class="flex-jacket">
+                <h2>4 Black jacket</h2>
+                <a href="viewjacket.html" class="cta view-button">VIEW JACKET</a></div>
+                <div class="flex-jacket">
+                  <h2>5 Black jacket</h2>
+                  <a href="viewjacket.html" class="cta view-button">VIEW JACKET</a></div>
+      </div>
+      </div>
     </main>
     <footer>Copyright</footer>
   </body>
 </html>
+

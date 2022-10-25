@@ -1,77 +1,89 @@
 @font-face {
   font-family: "JejuGothic";
   src: url("../fonts/JejuGothic/jejugothic/JejuGothic-Regular.ttf")
-  format("truetype");
+    format("truetype");
 }
 
-
-
-
-header{
-position: relative;
-color: #0a3641;
- font-family: "JejuGothic", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- position: fixed;
- font-size: 1.3rem;
- padding: 10px 10px;
+ul {
+  list-style-type: none;
 }
 
-header a {     /*links in header*/
-  color: #FFF;
+nav {
+  display: flex;
+  overflow: auto;
+  width: 100%;
+}
+
+header {
+  font-size: 1rem;
+  background-color: #fff;
+  width: 100%;
+  height: 90px;
+top: 10px;}
+
+header a {
+  /*links in header*/
+  color: #0a3641;
+  background-color: #fff;
   text-decoration: none;
-  background-color: #0a3641;
-  padding: 10px 40px 10px 10px;
-  
+  margin: 10px;
 }
+
 
 
 nav a:hover {
-  color:#f27712;
+  color: #f27712;
 }
 
 .current {
-  color:#f27712
+  color: #f27712;
+}
+
+bigcart {
+  background-image: url("../images/icons8-shopping-cart-72\(@3x\).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 30px;
+  top: 2px;
 }
 
 body {
-
-  font-family: "JejuGothic", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "JejuGothic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 /*Home page - hero*/
 
 .hero {
-background-image: url("../images/hero1.jpg");
-background-size: cover;
-height: 550px;  
-width: 100%;
+  background-image: url("../images/hero1.jpg");
+  background-size: cover;
+  height: 650px;
+  width: 100%;
 }
 
-
-
-
 h1 {
-  font-size: 70px;;
+  font-size: 70px;
   color: #f27712;
   max-width: 100%;
 }
 
-
 .cta__shop,
-.cta {        /*cta for all cta-buttons*/
+.cta {
+  /*cta for all cta-buttons*/
   background-color: #f27712;
-  color:#FFF; 
+  color: #fff;
   text-decoration: none;
-  font-size: 1.0em;
+  font-size: 1em;
   padding: 15px 50px 15px 50px;
 }
 
-
-.cta__shop {   /*shop men women*/
-display: inline-block;
-margin-top: 500px; 
-margin-left: 170px; 
+.cta__shop {
+  /*shop men women*/
+  display: inline-block;
+  margin-top: 500px;
+  margin-left: 170px;
 }
 
 .container1 {
@@ -86,19 +98,17 @@ margin-left: 170px;
   margin: 0px;
 }
 
-
 .shop--women {
   background-image: url("../images/womenshop_resized.png");
   background-repeat: no-repeat;
   width: 100%;
   height: 620px;
   margin: 0px;
-
 }
 
 .shop--all {
   background-image: url("../images/alljackets1.jpg");
-   background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 450px;
@@ -107,13 +117,11 @@ margin-left: 170px;
 
 .small {
   margin-top: 330px;
-  background-color: #FFF;
-  color:#f27712;
+  background-color: #fff;
+  color: #f27712;
   border-style: solid;
   border-width: 0.3ch;
 }
-
-
 
 /*mens productlist*/
 
@@ -125,127 +133,168 @@ margin-left: 170px;
 }
 
 .flex-jacket {
-  background-color: #FFF; 
+  background-color: #fff;
   width: 300px;
   height: 500px;
-  border-style:groove;
+  border-style: groove;
   border-color: #0a36411c;
 }
 
 .image {
-padding: 10px 10px 10px 10px; 
+  padding: 10px 10px 10px 10px;
 }
 
 .view-button {
- padding: 15px 50px 15px 50px;
-margin-top: auto; 
-margin-left: 40px; 
-right: 50px; 
-top: 10px; 
-text-align: center;
+  padding: 15px 50px 15px 50px;
+  margin-top: auto;
+  margin-left: 40px;
+  right: 50px;
+  top: 10px;
+  text-align: center;
 }
 
 .product-info {
   display: flex;
 }
 
-footer{
-display:block
-width: 100%;
-padding: 40px;
-text-align: center;
-background-color: #0a3641; 
-color: #FFF;
-
+footer {
+  display: block;
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  background-color: #fff;
+  color: #0a3641;
 }
 
+/*mobile screen*/
 
-/*mobile*/
 @media screen and (max-width: 600px) {
   nav,
-  #menu-checkbox {   /*hamburger hidden menu*/
-    display: none; 
+  #menu-checkbox {
+    /*hamburger hidden menu*/
+    display: none;
     position: fixed;
-    background: #0a3641; 
-  
+    background-color: #fff;
   }
-  
-  #menu-checkbox:checked  ~ nav {
-    display:block;
-    
+
+  #menu-checkbox:checked ~ nav {
+    display: block;
+    padding: 10px 30px 30px 30px;
+    text-align: left;
   }
-  
+
+  nav {
+    display: absolute;
+    left: 0px;
+    width: 200px;
+    position: fixed;
+
+
+  }
+
   nav a {
     display: block;
-    color: #FFF
+    background-color: #fff;
     text-decoration: none;
-  
+    width: 100px;
+    color: #0a3641;
   }
-  
-.hero-content {
-  height: 100%; 
-  min-width: 100%;
-  display: absolute;
+
+  /*burger-menu, logo, cart */
+.smallheader {
+  position: fixed;
+  padding: 30px;
+  height: 30px;
 }
 
-.cta_hero1 {
-background-color: #ffffff90;
-color: #0a3641;
-text-decoration: none;
-font-size: 1.0em;
-border-style: solid;
-border-color: #FFF;
-display: inline-block; 
-padding: 20px 110px 20px 120px;
-margin: 340px 0px 0px 113px;
 
-}
-  
-.cta_hero2 {
-  background-color: #ffffff90;
-  color: #0a3641; 
-  text-decoration: none;
-  border-style: solid;
-  border-color:#FFF;
-  display: inline-block;
-  font-size: 1.0em;
-  padding: 20px 100px 20px 100px;
-  margin: 20px 0px 0px 115px;
+  .menu-line {
+    /*burger menu*/
+    width: 20px;
+    height: 3px;
+    background-color: #0a3641;
+    margin-bottom: 4px;
+    position: flex;
+    display: block;
+  }
+  .nav-cart {
+    background-image: url("../images/icons8-shopping-cart-72\(@3x\).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 500px;
+    top: 15px;
+  }
+
+  .hero-content {
+    height: 100%;
+    min-width: 100%;
+    display: absolute;
+  }
+
+  .cta_hero1 {
+    background-color: #ffffff90;
+    color: #0a3641;
+    text-decoration: none;
+    font-size: 1em;
+    border-style: solid;
+    border-color: #fff;
+    display: inline-block;
+    padding: 20px 110px 20px 120px;
+    margin: 340px 0px 0px 113px;
+  }
+
+  .cta_hero2 {
+    background-color: #ffffff90;
+    color: #0a3641;
+    text-decoration: none;
+    border-style: solid;
+    border-color: #fff;
+    display: inline-block;
+    font-size: 1em;
+    padding: 20px 100px 20px 100px;
+    margin: 20px 0px 0px 115px;
   }
 }
-  
+
 /*desktop*/
 @media (min-width: 600px) {
-  
-  /*navigation*/ 
-  nav {
-    display: block;
-    position: static;
-    order: 1
-    overflow: auto;
-    width: 100%;
-    
+  /*navigation*/
+
+  .navbar-big {
+    background-color: #fff;
+    display: flex;
   }
 
+  .navlogo {
+    background-image: url("../images/RainyDays_logo1.png");
+    background-color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 150px;
+    margin: 0px 20px 0px;
+  }
+
+  .menu-line,
+  .cta_hero1,
+  .cta_hero2,
+  #menu-checkbox,
   .hamburger-icon {
     display: none;
   }
 
   nav a {
-  display: block;
-  width: 100%;
+    /*hover links*/
+    display: block;
+    width: 100%;
+  }
 
+  nav a,
+  nav li {
+    display: inline-block;
+    padding: 3px 20px 0px 10px;
+  }
 }
-
-nav li{
-  display: inline-block;
-
-}
-
-}
-
-
-
-
-
-

@@ -4,26 +4,52 @@
     format("truetype");
 }
 
-ul {
-  list-style-type: none;
+:root {
+  --background-size: cover;
+  --background-repeat: no-repeat;
+  --height: 650px;
+  --min-width: 100%;
+  --min-height: auto;
+  --blue: #0a3641;
+  --white: #fff;
+  --orange: #f27712;
 }
 
-nav li {
+ul {
+  list-style-type: none;
+  display: inline-block;
+}
+
+#navbar-main {
+  background-color: var(--white);
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+li {
   display: inline-block;
   padding: 10px 30px 0px 0px;
 }
 
 nav {
+  left: 0px;
+  width: 200px;
+  position: fixed;
   display: flex;
-  overflow: auto;
+  width: var(--min-width);
+}
+
+#header-container {
+  font-size: 1rem;
+  box-sizing: border-box;
   width: 100%;
 }
 
 header {
-  font-size: 1rem;
   background-color: var(--white);
-  min-width: var(--min-width);
-  height: 90px;
+  min-height: 80px;
+  min-width: none;
+  position: var(--min-width);
   top: 10px;
 }
 
@@ -42,17 +68,6 @@ nav a:hover {
   color: var(--orange);
 }
 
-.bigcart {
-  background-image: url("../icons/icons8-shopping-cart-72\(@3x\).png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 30px;
-  width: 30px;
-  position: absolute;
-  right: 30px;
-  top: 25px;
-}
-
 body {
   font-family: "JejuGothic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0px;
@@ -69,31 +84,40 @@ body {
 }
 
 h1 {
+  box-sizing: border-box;
   font-size: 70px;
   color: #f27712;
-  min-width: 100%;
-  margin: var(--margin);
+  width: var(--min-width);
+  margin: 0px;
 }
 
 .cta__shop,
 .cta {
   /*cta for all cta-buttons*/
-  background-color: #f27712;
-  color: #fff;
+  background-color: var(--orange);
+  color: var(--white);
   text-decoration: none;
   font-size: 1em;
   padding: 15px 50px 15px 50px;
 }
 
+#main-footer {
+  box-sizing: border-box;
+  display: block;
+  max-width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--white);
+  color: var(--blue);
+}
 .cta__shop {
-  /*shop men women*/
   display: inline-block;
   margin-top: 500px;
   margin-left: 170px;
 }
 
 .container1 {
-  width: 100%;
+  width: var(--min-width);
 }
 
 .shop--men {
@@ -125,26 +149,6 @@ h1 {
   color: var(--orange);
   border-style: solid;
   border-width: 0.3ch;
-}
-
-footer {
-  display: block;
-  max-width: 100%;
-  padding: 40px;
-  text-align: center;
-  background-color: var(--white);
-  color: var(--blue);
-}
-
-:root {
-  --background-size: cover;
-  --background-repeat: no-repeat;
-  --height: 650px;
-  --min-width: 100%;
-  --min-height: auto;
-  --blue: #0a3641;
-  --white: #fff;
-  --orange: #f27712;
 }
 
 /*mens productlist*/
@@ -221,10 +225,30 @@ p {
   padding: 15px 0px;
 }
 
+/*order complete*/
+
+.biglogo {
+  background-image: url("../icons/RainyDays_logo1.png");
+  background-size: contain;
+  background-repeat: var(--background-repeat);
+  position: fixed;
+  height: 400px;
+  width: 200px;
+  top: 400px;
+  left: 120px;
+}
+
+.ckeckout-content {
+  padding: 100px;
+  display: grid;
+  justify-content: space-between;
+}
+
 /*mobile screen*/
 
 @media screen and (max-width: 600px) {
   nav,
+  #navbar-main,
   #menu-checkbox {
     /*hamburger hidden menu*/
     display: none;
@@ -238,26 +262,30 @@ p {
     text-align: left;
   }
 
-  nav {
-    display: absolute;
-    left: 0px;
-    width: 200px;
-    position: fixed;
-  }
-
-  nav a {
-    display: block;
-    background-color: var(--white);
-    text-decoration: none;
-    width: 100%;
-    color: var(--blue);
-  }
-
   /*burger-menu, logo, cart */
+
+  nav li {
+    display: block;
+    padding: 10px;
+  }
+
+  .navbar-small {
+    display: block;
+    width: 200px;
+    margin: 20px 0px;
+  }
+
   .smallheader {
     position: fixed;
-    padding: 10px 10px 20px 20px;
-    height: 50px;
+    padding: 10px 0px 20px 20px;
+    height: 40px;
+  }
+
+  .small-cart {
+    display: flex;
+    box-sizing: border-box;
+    top: 20px;
+    right: 50px;
   }
 
   .burgericon {
@@ -274,18 +302,6 @@ p {
     display: block;
   }
 
-  .nav-cart {
-    background-image: url("../icons/icons8-shopping-cart-72\(@3x\).png");
-    background-repeat: var(--background-repeat);
-    background-size: var(--background-size);
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    max-width: 100%;
-    right: 90px;
-    top: 25px;
-  }
-
   .logosmall {
     background-image: url("../icons/RainyDays_logo1.png");
     background-color: var(--white);
@@ -294,7 +310,7 @@ p {
     position: fixed;
     height: 70px;
     width: 100px;
-    left: 190px;
+    left: 140px;
     top: 20px;
   }
 
@@ -352,11 +368,6 @@ p {
 @media (min-width: 600px) {
   /*navigation*/
 
-  .navbar-big {
-    background-color: var(--white);
-    display: flex;
-  }
-
   .navlogo {
     background-image: url("../icons/RainyDays_logo1.png");
     background-color: var(--white);
@@ -364,7 +375,8 @@ p {
     background-repeat: var(--background-repeat);
     height: 70px;
     width: 150px;
-    margin: 0px 20px 0px;
+    display: flex;
+    margin: 0px 50px 0px;
   }
 
   .logosmall,
@@ -380,5 +392,13 @@ p {
     /*hover links*/
     display: block;
     min-width: var(--min-width);
+  }
+
+  .bigcart {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    top: 10px;
+    right: 20px;
   }
 }

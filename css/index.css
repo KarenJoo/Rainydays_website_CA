@@ -358,6 +358,33 @@ p {
   justify-content: space-between;
 }
 
+/*about us*/
+
+.about__h1 {
+  margin: 100px 20px 20px 140px;
+  display: flex;
+}
+
+.about-img {
+  background-image: url("../images/aboutus-img.jpg");
+  background-size: cover;
+  background-repeat: var(--background-repeat);
+  box-sizing: border-box;
+  background-position: top 20px right 85%;
+  display: flex;
+  height: 900px;
+  width: 100%;
+}
+
+.about-info {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.831);
+  top: 600px;
+  left: 50px;
+  right: 30px;
+  padding: 50px 50px 50px 50px;
+  color: var(--blue);
+}
 /*mobile screen*/
 
 @media screen and (max-width: 600px) {

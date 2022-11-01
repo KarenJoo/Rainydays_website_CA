@@ -129,8 +129,8 @@ h1 {
   font-size: 70px;
   color: #f27712;
   width: var(--min-width);
-  margin: 0px;
-  padding: 20px 0px 0px 0px;
+  margin: 10px;
+  padding: 10px 0px 0px 0px;
 }
 
 .view-button,
@@ -196,11 +196,28 @@ h1 {
 /*mens productlist*/
 
 .hero-mens {
-  background-image: url("../images/menshop.jpg");
-  background-size: var(--cover);
+  background-image: url("../images/hero1.jpg");
+  background-size: cover;
   background-repeat: var(--background-repeat);
-  height: var(--height);
+  height: 600px;
   min-width: var(--min-width);
+  background-position: 10%;
+  margin: 100px 0px 30px;
+}
+
+.mens__h2 {
+  color: var(--white);
+  text-align: right;
+  display: inline-block;
+  padding: 350px 0px 0px 0px;
+  margin: 0px 0px 0px 70px;
+}
+
+.mens-info {
+  margin: 0px 40px 0px 0px;
+  background-color: var(--orange);
+  padding: 15px 0px 0px 0px;
+  color: var(--white);
 }
 
 .hero-womens {
@@ -219,9 +236,9 @@ h1 {
   min-width: var(--min-width);
 }
 
-.spesific__h1 {
+.mens__h1 {
   display: flex;
-  padding: 10px 70px 0px;
+  margin: 0px 0px 0px 90px;
 }
 
 .productlist {
@@ -229,7 +246,7 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   max-width: 1000px;
-  margin: 0px;
+  margin: 30px;
 }
 
 .mens-productlist img {
@@ -249,7 +266,7 @@ h1 {
 .product-info {
   display: flex;
   flex-direction: column;
-  margin: 10px 0px 30px 0px;
+  margin: 20px 0px 40px 0px;
 }
 
 .view-button {
@@ -268,6 +285,7 @@ p {
   font-size: 12px;
   display: inline-block;
   padding: 0px 40px;
+  margin: 10px 20px 30px 30px;
 }
 
 /*site spesific*/
@@ -361,7 +379,7 @@ p {
 /*about us*/
 
 .about__h1 {
-  margin: 100px 20px 20px 140px;
+  margin: 100px 0px 0px 100px;
   display: flex;
 }
 
@@ -377,12 +395,9 @@ p {
 }
 
 .about-info {
-  position: absolute;
+  margin: 400px 20px 200px 20px;
   background-color: rgba(255, 255, 255, 0.831);
-  top: 600px;
-  left: 50px;
-  right: 30px;
-  padding: 50px 50px 50px 50px;
+  padding: 50px 30px 350px 40px;
   color: var(--blue);
 }
 /*mobile screen*/
@@ -482,8 +497,9 @@ p {
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     max-width: 100%;
-    margin: 0px 0px 20px;
-    padding: 30px 60px;
+    margin: 0px 40px 0px;
+    align-items: center;
+    padding: 30px 30px;
   }
 
   /*shopping cart*/

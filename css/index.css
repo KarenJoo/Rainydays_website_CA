@@ -193,9 +193,10 @@ h1 {
   border-width: 0.3ch;
 }
 
-/*mens productlist*/
+/*productlist*/
 
-.hero-mens {
+.woman-hero-productlist,
+.man-hero-productlist {
   background-image: url("../images/hero1.jpg");
   background-size: cover;
   background-repeat: var(--background-repeat);
@@ -205,18 +206,23 @@ h1 {
   margin: 100px 0px 30px;
 }
 
-.mens__h2 {
-  color: var(--white);
-  text-align: right;
-  display: inline-block;
-  padding: 350px 0px 0px 0px;
-  margin: 0px 0px 0px 70px;
+.woman-hero-productlist {
+  background-image: url("../images/hero3.jpg");
 }
 
-.mens-info {
+.product-hero-content {
+  color: var(--white);
+  text-align: right;
+  display: block;
   margin: 0px 40px 0px 0px;
-  background-color: var(--orange);
-  padding: 15px 0px 0px 0px;
+  padding: 400px 0px 0px 10px;
+}
+
+.product-hero-info_text {
+  margin: 0px 40px 0px 0px;
+  display: inline-block;
+  background-color: var(--blue);
+  padding: 15px 15px 10px 20px;
   color: var(--white);
 }
 
@@ -236,9 +242,9 @@ h1 {
   min-width: var(--min-width);
 }
 
-.mens__h1 {
-  display: flex;
-  margin: 0px 0px 0px 90px;
+.products__h1 {
+  box-sizing: border-box;
+  margin: 0px 80px;
 }
 
 .productlist {
@@ -260,23 +266,29 @@ h1 {
   height: 500px;
   border-style: groove;
   border-color: #0a36411c;
-  padding: 20px;
+  margin: 0px 0px 0px 20px;
 }
 
-.product-info {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0px 40px 0px;
+.img__jacket {
+  width: 200px;
+  height: auto;
+  margin: 10px 50px;
+}
+
+.product-info__h2 {
+  margin: 0px 0px 0px 10px;
+  text-align: center;
+  font-size: 12px;
 }
 
 .view-button {
-  padding: 15px 10px 15px 80px;
-  box-sizing: border-box;
-  display: flexbox;
-  margin: 0px 30px 10px 10px;
+  padding: 15px 50px 15px 50px;
+  margin: 10px 30px 0px 30px;
+  display: inline-block;
+  font-size: 15px;
 }
 
-.product-info h2 {
+.product-info {
   font-size: 16px;
   margin: 10px 90px;
 }
@@ -284,8 +296,7 @@ h1 {
 p {
   font-size: 12px;
   display: inline-block;
-  padding: 0px 40px;
-  margin: 10px 20px 30px 30px;
+  text-align: center;
 }
 
 /*site spesific*/

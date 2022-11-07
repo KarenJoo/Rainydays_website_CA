@@ -9,6 +9,7 @@
   --background-repeat: no-repeat;
   --height: 650px;
   --min-width: 100%;
+  --max-width: 600px;
   --min-height: auto;
   --blue: #0a3641;
   --white: #fff;
@@ -64,7 +65,7 @@ nav a:hover {
   color: var(--orange);
 }
 
-.current {
+.active {
   color: var(--orange);
 }
 
@@ -78,9 +79,7 @@ h1 {
   box-sizing: border-box;
   font-size: 70px;
   color: #f27712;
-  max-width: var(--min-width);
-  margin: 0px 20px 20px 50px;
-  padding: 10px 0px 0px 0px;
+  min-width: 350px; 
 }
 
 /*Home page - hero*/
@@ -119,7 +118,7 @@ h1 {
   background-repeat: var(--background-repeat);
   box-sizing: border-box;
   height: 800px;
-  background-position: bottom 0px left 10%;
+  background-position: bottom 0px left 20%;
   min-width: 100%;
 }
 
@@ -160,13 +159,13 @@ h1 {
 .cta__shop {
   display: inline-block;
   margin-top: 500px;
-  margin-left: 170px;
+  margin-left: 140px;
 }
 .shop--men {
   background-image: url("../images/menshop.jpg");
   background-repeat: var(--background-repeat);
   min-width: var(--min-width);
-  height: auto;
+  height: 600px;
   background-position: top 0px right 55%;
 }
 
@@ -189,8 +188,10 @@ h1 {
 
 .small {
   margin-top: 330px;
+  margin-left: 110px;
   background-color: var(--white);
   color: var(--orange);
+
   border-style: solid;
   border-width: 0.3ch;
 }
@@ -453,6 +454,7 @@ p {
   background-color: #0a36411b;
 }
 
+
 .message-header {
   text-align: center;
   margin-top: 100px;
@@ -463,6 +465,7 @@ p {
 .img-map {
   background-image: url("../images/map.png");
   background-size: cover;
+  background-repeat: var(--background-repeat);
   min-height: 500px;
   max-width: 100%;
   background-position: top 10px left 75%;
@@ -473,7 +476,7 @@ p {
   background-image: url("../images/store-info.svg");
   background-size: cover;
   min-height: 300px;
-  max-width: 100%;
+  max-width: 400px;
   background-position: top 20px left 75%;
   margin: 50px 10px 50px 50px;
 }
@@ -481,7 +484,9 @@ p {
 /*about us*/
 
 .about {
-  margin: 100px 0px 0px 30px;
+  margin: 100px 0px 0px 70px;
+  max-width: 600px;
+  max-height: 600px;
 }
 
 .about-img {
@@ -498,8 +503,9 @@ p {
 .about-info {
   margin: 400px 20px 200px 20px;
   background-color: rgba(255, 255, 255, 0.831);
-  padding: 50px 30px 350px 40px;
+  padding: 50px 30px 400px 40px;
   color: var(--blue);
+  max-width: 600px;
 }
 
 /*mobile screen*/
@@ -618,7 +624,7 @@ p {
 
 /*DESKTOP*/
 
-@media (min-width: 600px) and (max-width: 3072px) {
+@media (min-width: 600px) and (max-width: 3572px) {
   /*navigation*/
 
   .navlogo {
@@ -663,10 +669,16 @@ p {
     min-height: auto;
   }
 
-  .title {
-    display: flex;
-    padding: 10px 0px 0px 200px;
-    max-width: 100%;
-    min-height: auto;
+  .header-big {
+    padding: 0px 0px 0px 300px;
+    max-width: var(--max-width)
+  }
+
+  /*about us*/
+
+  .about-info,
+  .aboutbig {
+    width: 100%;
+    margin: 20% 30%;
   }
 }

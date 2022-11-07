@@ -23,6 +23,7 @@ ul {
 #navbar-main {
   background-color: var(--white);
   box-sizing: border-box;
+  position: absolute;
   padding: 10px;
 }
 
@@ -49,7 +50,6 @@ header {
   background-color: var(--white);
   min-height: 80px;
   min-width: var(--min-width);
-  position: var(--min-width);
   top: 10px;
 }
 
@@ -74,6 +74,15 @@ body {
   width: var(--min-width);
 }
 
+h1 {
+  box-sizing: border-box;
+  font-size: 70px;
+  color: #f27712;
+  max-width: var(--min-width);
+  margin: 0px 20px 20px 50px;
+  padding: 10px 0px 0px 0px;
+}
+
 /*Home page - hero*/
 
 /*slider learned from css-tricks*/
@@ -95,12 +104,12 @@ body {
 }
 
 #slide-1 {
-  background-image: url("../images/hero1.jpg");
+  background-image: url("../images/manrunning.jpg");
   background-size: cover;
   background-repeat: var(--background-repeat);
   box-sizing: border-box;
   height: 800px;
-  background-position: top 20px right 85%;
+  background-position: top 60px right 85%;
   min-width: 100%;
 }
 
@@ -110,7 +119,7 @@ body {
   background-repeat: var(--background-repeat);
   box-sizing: border-box;
   height: 800px;
-  background-position: bottom 0px left 50%;
+  background-position: bottom 0px left 10%;
   min-width: 100%;
 }
 
@@ -122,15 +131,6 @@ body {
   height: 800px;
   background-position: bottom 30% right 10%;
   width: 100%;
-}
-
-h1 {
-  box-sizing: border-box;
-  font-size: 70px;
-  color: #f27712;
-  width: var(--min-width);
-  margin: 10px;
-  padding: 10px 0px 0px 0px;
 }
 
 .view-button,
@@ -152,25 +152,27 @@ h1 {
   background-color: var(--white);
   color: var(--blue);
 }
-.cta__shop {
-  display: inline-block;
-  margin-top: 500px;
-  margin-left: 170px;
-}
 
 .container1 {
   width: var(--min-width);
 }
 
+.cta__shop {
+  display: inline-block;
+  margin-top: 500px;
+  margin-left: 170px;
+}
 .shop--men {
   background-image: url("../images/menshop.jpg");
   background-repeat: var(--background-repeat);
   min-width: var(--min-width);
-  height: 620px;
+  height: auto;
+  background-position: top 0px right 55%;
 }
 
 .shop--women {
-  background-image: url("../images/womenshop_resized.png");
+  background-image: url("../images/womenshop_resized.jpg");
+  background-size: cover;
   background-repeat: var(--background-repeat);
   min-width: var(--min-width);
   height: 620px;
@@ -195,27 +197,35 @@ h1 {
 
 /*productlist*/
 
+.alljackets-hero-productlist,
 .woman-hero-productlist,
 .man-hero-productlist {
-  background-image: url("../images/hero1.jpg");
+  background-image: url("../images/manrunning.jpg");
   background-size: cover;
   background-repeat: var(--background-repeat);
   height: 600px;
   min-width: var(--min-width);
-  background-position: 10%;
-  margin: 100px 0px 30px;
+  background-position: top 70px left 20%;
+  margin: 0px 0px 30px;
 }
 
 .woman-hero-productlist {
   background-image: url("../images/hero3.jpg");
+  max-height: 700px;
+  background-position: top 100px left 20%;
+}
+
+.alljackets-hero-productlist {
+  background-image: url("../images/hero-2.jpg");
+  min-height: 700px;
+  background-position: bottom 0px left 30%;
+  margin-top: 40px;
 }
 
 .product-hero-content {
   color: var(--white);
-  text-align: right;
-  display: block;
-  margin: 0px 40px 0px 0px;
-  padding: 400px 0px 0px 10px;
+  display: inline-block;
+  padding: 400px 0px 0px 180px;
 }
 
 .product-hero-info_text {
@@ -242,9 +252,9 @@ h1 {
   min-width: var(--min-width);
 }
 
-.products__h1 {
+.products-header {
   box-sizing: border-box;
-  margin: 0px 80px;
+  margin: 0px 20px;
 }
 
 .productlist {
@@ -290,7 +300,8 @@ h1 {
 
 .product-info {
   font-size: 16px;
-  margin: 10px 90px;
+  width: 200px;
+  margin: 10px 60px;
 }
 
 p {
@@ -300,16 +311,15 @@ p {
 }
 
 /*site spesific*/
-.spesific__h1 {
+.spesific-header {
   position: flex;
-  padding: 100px 80px 10px;
+  padding: 100px 50px 10px;
 }
 .spesific-container {
-  box-sizing: border-box;
   display: block;
-  height: var(--min-height);
-  max-width: 100%;
-  padding: 30px 60px;
+  height: 800px;
+  max-width: 600px;
+  padding: 10px 60px;
 }
 
 .spesific-jacket {
@@ -324,18 +334,18 @@ p {
 
 .spesific-cta {
   width: 120px;
-  position: flex;
-  margin: 0px 70px;
+  display: inline-block;
+  margin: 20px 0px 0px 0px;
 }
 
 /*shopping cart*/
-.cart__h1 {
+.cart-header {
   position: flex;
   padding: 100px 80px 10px;
 }
 .cart-container {
   display: flex;
-  margin: 0px auto;
+  margin: 30px auto;
   min-height: 400px;
   max-width: 100%;
   font-size: 12px;
@@ -357,41 +367,121 @@ p {
 }
 
 p {
-  padding: 0px;
+  text-align: left;
 }
 
+.qty {
+  padding: 60px 0px 0px 0px;
+}
+.shopping-form {
+  padding: 10px;
+  width: 200px;
+  height: auto;
+}
 .cart-cta {
   box-sizing: border-box;
   position: absolute;
-  top: 480px;
-  right: 30px;
+  top: 600px;
+  right: 90px;
   font-size: 12px;
 }
 
-/*order complete*/
+/*checkout*/
 
-.biglogo {
+.checkout-header h1 {
+  box-sizing: border-box;
+  margin: 100px 10px;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 20px 20px 20px 30px;
+}
+
+.checkout-phurcase {
+  max-width: 300px;
+  padding: 0px;
+  margin: 0px 10px 30px 20px;
+}
+
+/*Success order complete*/
+
+.success-biglogo {
   background-image: url("../icons/RainyDays_logo1.png");
   background-size: contain;
   background-repeat: var(--background-repeat);
-  position: fixed;
-  height: 400px;
+  height: 200px;
   width: 200px;
-  top: 400px;
-  left: 120px;
+  display: flex;
 }
 
-.ckeckout-content {
+.success-content {
   padding: 100px;
   display: grid;
   justify-content: space-between;
 }
 
+.success-header h2 {
+  box-sizing: border-box;
+  margin: 180px 0px 0px 100px;
+  color: var(--orange);
+}
+
+/*contact us*/
+
+.contact-message,
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 20px 20px 0px 30px;
+}
+.contact-message {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  max-width: 600px;
+}
+
+.contact-content1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0a36411b;
+}
+
+.message-header {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  color: #f27712;
+}
+
+.img-map {
+  background-image: url("../images/map.png");
+  background-size: cover;
+  min-height: 500px;
+  max-width: 100%;
+  background-position: top 10px left 75%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.store-info {
+  background-image: url("../images/store-info.svg");
+  background-size: cover;
+  min-height: 300px;
+  max-width: 100%;
+  background-position: top 20px left 75%;
+  margin: 50px 10px 50px 50px;
+}
+
 /*about us*/
 
-.about__h1 {
-  margin: 100px 0px 0px 100px;
-  display: flex;
+.about {
+  margin: 100px 0px 0px 30px;
 }
 
 .about-img {
@@ -411,9 +501,10 @@ p {
   padding: 50px 30px 350px 40px;
   color: var(--blue);
 }
+
 /*mobile screen*/
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 320px) and (max-width: 600px) {
   nav,
   #navbar-main,
   #menu-checkbox {
@@ -491,34 +582,43 @@ p {
     font-size: 1em;
     border-style: solid;
     border-color: var(--white);
-    position: absolute;
-    padding: 20px 75px 20px 75px;
-    margin: 600px 0px 0px 80px;
+    padding: 20px 90px 20px 90px;
+  }
+  .cta-hero2 {
+    background-color: #ffffff90;
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 1em;
+    border-style: solid;
+    border-color: var(--white);
+    padding: 30px 75px 20px 75px;
   }
 
-  .cta-hero1__cta-hero2 {
-    top: 200px;
-    left: 100px;
-  }
-
-  /*mens jackets mobile*/
+  /*productlist mobile*/
 
   .small-productlist {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     max-width: 100%;
-    margin: 0px 40px 0px;
+    margin: 0px 10px 0px;
     align-items: center;
     padding: 30px 30px;
   }
 
-  /*shopping cart*/
+  .woman-hero-productlist {
+    background-size: cover;
+    background-repeat: var(--background-repeat);
+    box-sizing: border-box;
+    height: 800px;
+    background-position: top 50% right 10%;
+    width: 100%;
+  }
 }
 
 /*DESKTOP*/
 
-@media (min-width: 600px) {
+@media (min-width: 600px) and (max-width: 3072px) {
   /*navigation*/
 
   .navlogo {
@@ -553,5 +653,20 @@ p {
     height: auto;
     top: 10px;
     right: 20px;
+  }
+
+  .container1-big {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    min-width: var(--min-width);
+    min-height: auto;
+  }
+
+  .title {
+    display: flex;
+    padding: 10px 0px 0px 200px;
+    max-width: 100%;
+    min-height: auto;
   }
 }

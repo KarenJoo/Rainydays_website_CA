@@ -33,43 +33,30 @@
       </nav>
     </header>
     <main>
-      <section class="hero herobig"></section>
-      <section>
-        <h1>checkout</h1>
-      </section>
+        <div class="checkout-header title">
+          <h1>CHECKOUT</h1>
+          </div>
       <form action="form-success.php" method="POST">
-        <fieldset>
+        <fieldset class="checkout-form">
           <legend>Your details</legend>
           <label for="name">Your name</label>
           <input type="text" name="name" id="name" class="form__input" required/>
           <label for="phone">Your phone number</label>
           <input type="tel" name="phone" id="phone" class="form__input" />
           <label for="email">Your email adress</label>
-          <input type="email" name="email" id="email" class="form__input" required/>
-          <input type="radio" id="male" name="gender" value="male" />
-          <label for="male">Male</label>
-          <input type="radio" id="female" name="gender" value="female" />
-          <label for="female">Female</label>
-          <input
-            type="radio"
-            id="undisclosed"
-            name="gender"
-            value="undisclosed"
-          />
-          <label for="radio">Undisclosed</label>
-    
-        <legend>Your phurcase</legend>
-        <select name="product">
-          <option value="product-one">Product one</option>
-          <option value="product-two">Product two</option>
-          <option value="product-three">Product three</option>
-          <option value="product-four">Product four</option>
-  </fieldset>
-  <input type="submit" value="Complete order">
+          <input type="email" name="email" id="email" class="form__input" required/> 
+        </fieldset>
+        <legend class="checkout-form">Pay method </legend>
+        <select name="pay-option" class="checkout-phurcase">
+          <option value="pay-option-one">Visa Card</option>
+          <option value="pay-option-two">Master Card</option>
+          <option value="pay-option-three">Paypal</option>
+  <input type="submit" value="verify pay method" required>
+  </select>
   <a href="checkout-success.html" class="cta view-button">complete order</a>
         </select>
       </form>
     </main>
-    <footer>Copyright</footer>
+    <footer id="main-footer">&copy; copyright</footer>
   </body>
 </html>

@@ -1,0 +1,689 @@
+@font-face {
+  font-family: "JejuGothic";
+  src: url("../fonts/JejuGothic/jejugothic/JejuGothic-Regular.ttf")
+    format("truetype");
+}
+
+:root {
+  --background-size: cover;
+  --background-repeat: no-repeat;
+  --height: 650px;
+  --min-width: 100%;
+  --min-height: auto;
+  --blue: #0a3641;
+  --white: #fff;
+  --green: #a99e66;
+}
+
+
+ul {
+  list-style-type: none;
+  display: inline-block;
+  margin: 20px 0px 0px 0px;
+}
+
+#navbar-main {
+  background-color: var(--white);
+  box-sizing: border-box;
+  position: absolute;
+}
+
+li {
+  display: inline-block;
+  padding: 10px 20px 0px 0px;
+}
+
+nav {
+  left: 0px;
+  position: fixed;
+  display: flex;
+  width: var(--min-width);
+}
+
+#header-container {
+  font-size: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 10px;
+}
+
+header {
+  background-color: var(--white);
+  min-height: 85px;
+  min-width: 100%;
+  top: 10px;
+  }
+  
+header a {
+  /*links in header*/
+  color: var(--blue);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--green);
+}
+
+.current {
+  color: var(--green);
+}
+
+body {
+  font-family: "JejuGothic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px auto;
+  max-width: 100%;
+}
+
+h1 {
+  box-sizing: border-box;
+  font-size: 30px;
+  color: var(--blue);
+  padding-left: 10px;
+}
+
+
+/*Home page - hero*/
+
+/*slider learned from css-tricks*/
+
+.slider-container {
+  max-width: 100%;
+  height: 700px;
+  display: flex;
+  overflow-y: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.slide {
+  max-width: 100%;
+  flex-shrink: 0;
+  height: 600px;
+  scroll-snap-align: start;
+  margin-top: 70px;
+
+}
+
+#slide-1 {
+  background-image: url("../images/manrunning.jpg");
+  background-size: cover;
+  background-repeat: var(--background-repeat);
+  box-sizing: border-box;
+  height: 700px;
+  background-position: top 0px right 85%;
+ width: 100%;
+}
+
+#slide-2 {
+  background-image: url("../images/hero-2.jpg");
+  background-size: cover;
+  background-repeat: var(--background-repeat);
+  box-sizing: border-box;
+  height: 700px;
+  background-position: bottom 0px left 10%;
+  width: 100%;
+}
+
+#slide-3 {
+  background-image: url("../images/hero3.jpg");
+  background-size: cover;
+  background-repeat: var(--background-repeat);
+  box-sizing: border-box;
+  height: 700px;
+  background-position: bottom 80% right 10%;
+  width: 100%;
+}
+
+.view-button,
+.cta-shop,
+.cta {
+  /*cta for all cta-buttons*/
+  background-color: var(--white);
+  box-sizing: border-box;
+color: var(--blue);
+font-size: 15px;
+  border-style: solid;
+  border-width: 0.3ch;
+  text-decoration: none;
+  min-width: 250px;
+  max-width: 250px;
+  font-size: 1em;
+  padding: 15px 0px 15px 60px;
+}
+
+#main-footer {
+  max-width: var(--min-width);
+  padding: 50px;
+  max-width: 100%;
+  text-align: center;
+  background-color: var(--white);
+  color: var(--blue);
+}
+
+
+.shop--all,
+.shop--women,
+.shop--men {
+  display: inline-block;
+  background-image: url("../images/menshop.jpg");
+  background-repeat: var(--background-repeat);
+  background-size: cover;
+  width: 100%;
+  height: 620px;
+}
+
+.shop--women {
+  background-image: url("../images/womenshop_resized.jpg");
+}
+
+.shop--all {
+  background-image: url("../images/alljackets1.jpg");
+  max-height: 620px;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.shop--all:hover {
+}
+
+/*productlist*/
+
+.alljackets-hero-productlist,
+.woman-hero-productlist,
+.man-hero-productlist {
+  background-image: url("../images/manrunning.jpg");
+  background-size: cover;
+  background-repeat: var(--background-repeat);
+  height: 600px;
+  min-width: var(--min-width);
+  background-position: top 70px left 20%;
+  margin: 0px 0px 30px;
+}
+
+.woman-hero-productlist {
+  background-image: url("../images/hero3.jpg");
+  max-height: 700px;
+  background-position: top 100px left 20%;
+}
+
+.alljackets-hero-productlist {
+  background-image: url("../images/hero-2.jpg");
+  min-height: 700px;
+  background-position: bottom 0px left 30%;
+  margin-top: 40px;
+}
+
+.product-hero-content {
+  color: var(--white);
+  display: inline-block;
+  padding: 400px 0px 0px 180px;
+}
+
+.product-hero-info_text {
+  margin: 0px 40px 0px 0px;
+  display: inline-block;
+  background-color: var(--blue);
+  padding: 15px 15px 10px 20px;
+  color: var(--white);
+}
+
+.hero-womens {
+  background-image: url("../images/womenshop_resized.png");
+  background-size: var(--cover);
+  background-repeat: var(--none);
+  height: var(--height);
+  min-width: var(--min-width);
+}
+
+.hero-alljackets {
+  background-image: url("../images/hero3.jpg");
+  background-size: cover;
+  background-repeat: var(--none);
+  height: var(--height);
+  min-width: var(--min-width);
+}
+
+.products-header {
+  box-sizing: border-box;
+  margin: 0px 20px;
+}
+
+.productlist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 30px;
+}
+
+.mens-productlist img {
+  min-width: var(--min-width);
+  min-height: var(--min-height);
+}
+
+.flex-jacket {
+  background-color: var(--white);
+  width: 300px;
+  height: 500px;
+  border-style: groove;
+  border-color: #0a36411c;
+  margin: 0px 0px 0px 20px;
+}
+
+.flex-jacket:hover{
+  box-shadow: #a99e66;
+border-style: solid;
+border-color: #f27712;
+}
+
+.img__jacket {
+  width: 200px;
+  height: auto;
+  margin: 10px 50px;
+}
+
+.product-info__h2 {
+  margin: 0px 0px 0px 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.view-button {
+  padding: 15px 30px 15px 40px;
+  margin: 10px 30px 0px 15px;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.product-info {
+  font-size: 16px;
+  width: 200px;
+  margin: 10px 60px;
+}
+
+p {
+  font-size: 12px;
+  display: inline-block;
+  text-align: center;
+}
+
+/*site spesific*/
+.spesific-header {
+  position: flex;
+  padding: 100px 50px 10px;
+}
+.spesific-container {
+  display: block;
+  height: 800px;
+  max-width: 600px;
+  padding: 10px 60px;
+}
+
+.spesific-jacket {
+  background-color: var(--white);
+  width: 80px;
+  height: auto;
+}
+
+.spesific-info {
+  padding: 10px 0px 0px 0px;
+}
+
+.spesific-cta {
+  width: 120px;
+  display: inline-block;
+  margin: 20px 0px 0px 0px;
+}
+
+/*shopping cart*/
+.cart-header {
+  position: flex;
+  padding: 100px 80px 10px;
+}
+.cart-container {
+  display: flex;
+  margin: 30px auto;
+  min-height: 400px;
+  max-width: 100%;
+  font-size: 12px;
+}
+
+.cart-image {
+  background-image: url("../images/RainyDays_1jacketsmall.jpg");
+  background-size: contain;
+  background-repeat: var(--background-repeat);
+  display: flex;
+  height: 500px;
+  width: 400px;
+}
+
+.cart-info {
+  margin: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  text-align: left;
+}
+
+.qty {
+  padding: 60px 0px 0px 0px;
+}
+.shopping-form {
+  padding: 10px;
+  width: 200px;
+  height: auto;
+}
+.cart-cta {
+  box-sizing: border-box;
+  position: absolute;
+  top: 600px;
+  right: 90px;
+  font-size: 12px;
+}
+
+/*checkout*/
+
+.checkout-header h1 {
+  box-sizing: border-box;
+  margin: 100px 10px;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 20px 20px 20px 30px;
+}
+
+.checkout-phurcase {
+  max-width: 300px;
+  padding: 0px;
+  margin: 0px 10px 30px 20px;
+}
+
+/*Success order complete*/
+
+.success-biglogo {
+  background-image: url("../icons/RainyDays_logo1.png");
+  background-size: contain;
+  background-repeat: var(--background-repeat);
+  height: 200px;
+  width: 200px;
+  display: flex;
+}
+
+.success-content {
+  padding: 100px;
+  display: grid;
+  justify-content: space-between;
+}
+
+.success-header h2 {
+  box-sizing: border-box;
+  margin: 180px 0px 0px 100px;
+  color: var(--orange);
+}
+
+/*contact us*/
+
+.contact-message,
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 20px 20px 0px 30px;
+}
+.contact-message {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  max-width: 600px;
+}
+
+.contact-content1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0a36411b;
+}
+
+.message-header {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  color: #f27712;
+}
+
+.img-map {
+  background-image: url("../images/map.png");
+  background-size: cover;
+  min-height: 500px;
+  max-width: 100%;
+  background-position: top 10px left 75%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.store-info {
+  background-image: url("../images/store-info.svg");
+  background-size: cover;
+  min-height: 300px;
+  max-width: 100%;
+  background-position: top 20px left 75%;
+  margin: 50px 10px 50px 50px;
+}
+
+/*about us*/
+
+.about {
+  margin: 100px 0px 0px 30px;
+}
+
+.about-img {
+  background-image: url("../images/aboutus-img.jpg");
+  background-size: cover;
+  background-repeat: var(--background-repeat);
+  box-sizing: border-box;
+  background-position: top 20px right 85%;
+  display: flex;
+  height: 900px;
+  width: 100%;
+}
+
+.about-info {
+  margin: 400px 20px 200px 20px;
+  background-color: rgba(255, 255, 255, 0.831);
+  padding: 50px 30px 350px 40px;
+  color: var(--blue);
+}
+
+/*mobile screen*/
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  nav,
+  #navbar-main,
+  #menu-checkbox {
+    /*hamburger hidden menu*/
+    display: none;
+    position: fixed;
+    background-color: var(--white);
+  }
+
+  #menu-checkbox:checked ~ nav {
+    display: block;
+    padding: 10px 30px 30px 30px;
+    text-align: left;
+  }
+
+  /*burger-menu, logo, cart */
+
+  nav li {
+    display: block;
+    padding: 10px;
+  }
+
+  .navbar-small {
+    display: block;
+    position: absolute;
+    width: 200px;
+    margin: 20px 0px;
+  }
+
+  .smallheader {
+    position: fixed;
+    box-sizing: border-box;
+    padding: 10px 0px 20px 20px;
+    height: 40px;
+    width: 100%;
+    border-style: dashed;
+  }
+
+
+  .burgericon {
+    padding: 20px 10px;
+  }
+
+  .menu-line {
+    /*burger menu*/
+    width: 20px;
+    height: 3px;
+    background-color: var(--blue);
+    margin-bottom: 4px;
+    position: flex;
+    display: block;
+  }
+
+  .logosmall {
+    background-image: url("../icons/RainyDays_logo1.png");
+    background-color: var(--white);
+    background-size: contain;
+    background-repeat: var(--background-repeat);
+    position: fixed;
+    height: 70px;
+    width: 100px;
+    left: 140px;
+    top: 20px;
+  }
+
+.cta-shop {
+display: inline-block; 
+text-align: center;
+font-size: 13px;
+padding: 20px 50px 20px 50px;
+margin: 450px 100px;
+  }
+
+  .container1 {
+   box-sizing: border-box;
+width: 100%;
+    max-height: auto;
+  }
+
+
+  /*productlist mobile*/
+
+  .small-productlist {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    max-width: 100%;
+    margin: 0px 10px 0px;
+    align-items: center;
+    padding: 30px 30px;
+  }
+
+  .woman-hero-productlist {
+    background-size: cover;
+    background-repeat: var(--background-repeat);
+    box-sizing: border-box;
+    height: 800px;
+    background-position: top 50% right 10%;
+    width: 100%;
+  }
+}
+
+/*DESKTOP*/
+
+@media (min-width: 600px) and (max-width: 3072px) {
+  /*navigation*/
+
+  .navlogo {
+    background-image: url("../icons/RainyDays_logo1.png");
+    background-color: var(--white);
+    background-size: contain;
+    background-repeat: var(--background-repeat);
+    width: 40px;
+    display: flex;
+    margin: 0px 50px 0px;
+  }
+
+  .ul-big {
+    box-sizing: border-box;
+    display: block;
+    max-width: 80%;
+  }
+
+
+  .logosmall,
+  .menu-line,
+  .cta_hero1,
+  .cta_hero2,
+  #menu-checkbox,
+  .hamburger-icon {
+    display: none;
+  }
+
+  nav a {
+    /*hover links*/
+    min-width: var(--min-width);
+  }
+
+.logo-container {
+    display: inline-block;
+  }
+
+  .navlogo-big {
+   box-sizing: border-box;
+    height: 50px;
+    margin-top: 15px;
+    pa
+  }
+
+  .slidebig {
+    margin: 0;  
+  }
+
+  .container1-big {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    min-width: var(--min-width);
+    min-height: auto;
+  }
+
+  .cta-big {
+    display: inline-block;
+  padding: 20px 80px;
+  margin: 450px 0px 0px 90px;
+  text-align: center;
+  font-size: 12px;
+  }
+
+  .cta-alljackets {
+    display: inline-block;
+    padding: 20px 0px 20px 50px;
+    margin: 450px 0px 0px 250px;
+    font-size: 12px;
+
+  }
+  
+
+.title {
+display: flex;
+padding: 10px 0px 0px 200px;
+max-width: 100%;
+min-height: auto;
+  }
+}

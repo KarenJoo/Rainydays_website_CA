@@ -15,6 +15,12 @@
   --green: #a99e66;
 }
 
+/*Hover effect from https://stackoverflow.com/questions/13781208/making-ahref-from-a-div*/
+
+a.productlist, 
+a.small-productlist {
+  display: block;
+}
 
 ul {
   list-style-type: none;
@@ -182,8 +188,7 @@ font-size: 15px;
   margin-top: 20px;
 }
 
-.shop--all:hover {
-}
+
 
 /*productlist*/
 
@@ -263,47 +268,40 @@ font-size: 15px;
 .flex-jacket {
   background-color: var(--white);
   width: 300px;
-  height: 500px;
+  height: 600px;
   border-style: groove;
   border-color: #0a36411c;
-  margin: 0px 0px 0px 20px;
+  margin: 0px 0px 20px 20px;
+  padding: 10px 10px 0px 20px; 
 }
 
 .flex-jacket:hover{
-  box-shadow: #a99e66;
+box-shadow: #a99e66;
 border-style: solid;
 border-color: #f27712;
 }
 
 .img__jacket {
-  width: 200px;
+  width: 100%;
   height: auto;
-  margin: 10px 50px;
+  margin: 0px 0px;
 }
 
 .product-info__h2 {
-  margin: 0px 0px 0px 10px;
-  text-align: center;
+  text-align: left;
   font-size: 12px;
 }
 
 .view-button {
-  padding: 15px 30px 15px 40px;
-  margin: 10px 30px 0px 15px;
+  padding: 15px 0px 15px 70px;
+  margin: 20px 0;
   display: inline-block;
   font-size: 15px;
-}
-
-.product-info {
-  font-size: 16px;
-  width: 200px;
-  margin: 10px 60px;
 }
 
 p {
   font-size: 12px;
   display: inline-block;
-  text-align: center;
 }
 
 /*site spesific*/
@@ -347,6 +345,7 @@ p {
   font-size: 12px;
 }
 
+.cartimage-small,
 .cart-image {
   background-image: url("../images/RainyDays_1jacket.jpg");
   background-size: contain;
@@ -356,8 +355,9 @@ p {
   width: 400px;
 }
 
+.cartinfo-small,
 .cart-info {
-  margin: 1px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -367,8 +367,9 @@ p {
 }
 
 .qty {
-  padding: 60px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
 }
+
 .shopping-form {
   padding: 10px;
   width: 200px;
@@ -596,14 +597,16 @@ width: 100%;
 
   /*productlist mobile*/
 
-  .small-productlist {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+  a.small-productlist {
+display: flex;    
     gap: 1rem;
+    justify-content: space-between;
     max-width: 100%;
-    margin: 0px 10px 0px;
+    margin: 0px auto;
     align-items: center;
-    padding: 30px 30px;
+    text-decoration: none;
+    color: var(--blue);
+   
   }
 
   .woman-hero-productlist {
@@ -614,7 +617,30 @@ width: 100%;
     background-position: top 50% right 10%;
     width: 100%;
   }
+
+  .cartcontainer-small {
+display: grid;
+box-sizing: border-box;
+max-height: 700px;
 }
+
+.cartimage-small{
+  width: 200px;
+  height: 400px;
+  margin: 10px 0px 10px 60px; 
+
+}
+
+.cartinfo-small{
+  display: ;
+}
+}
+
+
+
+
+
+
 
 /*DESKTOP*/
 

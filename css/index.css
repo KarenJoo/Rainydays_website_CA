@@ -78,11 +78,11 @@ body {
 
 h1 {
   box-sizing: border-box;
-  display: block;
-  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
   font-size: 1.5em;
   color: var(--blue);
-  margin: 20px;
+  padding: 10px; 
 }
 
 /*Home page - hero*/
@@ -221,7 +221,7 @@ h1 {
 .alljackets-hero-productlist {
   background-image: url("../images/hero-2.jpg");
   max-height: 1000px;
-  background-position: top 10% left 30%;
+  background-position: top 50% left 20%;
   max-width: 100%;
   min-height: 700px;
 }
@@ -230,15 +230,15 @@ h1 {
   color: var(--white);
   display: inline-block;
   box-sizing: border-box;
-  padding: 400px 0px 0px 180px;
+  padding: 350px 0px 0px 140px;
 }
 
 .product-hero-info_text {
   box-sizing: border-box;
   display: inline-block;
-  max-width: 80%;
+  max-width: 85%;
   background-color: var(--blue);
-  padding: 15px 15px 10px 20px;
+  padding: 15px 25px 10px 20px;
   color: var(--white);
 }
 
@@ -436,13 +436,13 @@ p {
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  margin: 20px 20px 0px 30px;
+border-style: none;
+margin: 0 auto;
 }
 .contact-message {
-  display: flex;
-  box-sizing: border-box;
+  display: inline-block
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   max-width: 600px;
 }
 
@@ -453,10 +453,12 @@ p {
   background-color: #0a36411b;
 }
 
+.products__h1,
+.title,
 .message-header {
   text-align: center;
-  margin-top: 100px;
-  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 30px;
   color: #f27712;
 }
 
@@ -472,21 +474,20 @@ p {
 }
 .store-info {
   background-image: url("../images/store-info.svg");
-  background-size: cover;
-  min-height: 300px;
+  background-size: contain;
+  background-repeat: var(--background-repeat);
+  min-height: 250px;
   max-width: 100%;
-  background-position: top 20px left 75%;
-  margin: 50px 10px 50px 50px;
+  margin: 50px 0px 0px 0px;
+  background-position: 60%;
+
 }
 
 /*about us*/
 
-.about {
-  margin: 100px 0px 0px 30px;
-}
 
 .about-img {
-  background-image: url("../images/aboutus-img.jpg");
+  background-image: url("../images/aiguille-du-grepon-mont-blanc-massif\(1\).jpg");
   background-size: cover;
   background-repeat: var(--background-repeat);
   box-sizing: border-box;
@@ -672,10 +673,11 @@ p {
     font-size: 12px;
   }
 
-  .title {
+  .title h1 {
     box-sizing: border-box;
-    display: block;
-    margin: 0 auto;
+    display: inline-block; 
+    align-items: center;
+    margin: 0 auto; 
     max-width: 100%;
     min-height: auto;
   }
@@ -683,29 +685,25 @@ p {
   /*shop men, women all jackets*/
 
   .big-container1 {
-    display: grid;
-    grid-auto-rows: minmax (600px, auto);
-    max-width: 100%;
+    display: grid; 
+    grid-template-columns: repeat(2, 50%);  
+max-width: 100%;
+
   }
 
   .shop-big1 {
     box-sizing: border-box;
-    display: inline-block;
-    background-position: top 50% left 80%;
-    max-width: 90%;
+    background-position: top 20% left 80%;
+    max-width: 100%;
     max-height: auto;
-    grid-column: 1/2;
-    grid-row: 1;
   }
 
   .shop-big2 {
     box-sizing: border-box;
-    display: inline-block;
-    max-width: 85%;
-    background-position: top 80% right 0%;
+    max-width: 100%;
+    background-position: top 30% right 40%;
     background-size: cover;
-    grid-column: 2/3;
-    grid-row: 1/2;
+
   }
 
   .shop-big3 {
@@ -713,28 +711,29 @@ p {
     display: inline-block;
     max-width: 100%;
     max-height: auto;
-    grid-column: 1/3;
-    grid-row: 2;
+    margin: 0;
+
   }
 
   .big-ctashop {
-    padding: 20px 20px 20px 90px;
+    padding: 20px 0px 30px 90px;
   }
 
   .shopall-big {
+    box-sizing: border-box;
+    display:flex;
     padding: 20px 60px 20px;
-    margin: 450px 0px 0px 440px;
-  }
+    margin: 400px 0px 0px 400px; 
+ }
 
   /*productlist jackets*/
 
   .womanhero-big,
-  .manhero-big,
-  .allhero-big {
+  .manhero-big {
     box-sizing: border-box;
     max-width: 100%;
     max-height: 700px;
-    background-position: bottom 75% right 0%;
+    background-position: bottom 85% right 0%;
     margin: 0px;
   }
 

@@ -16,6 +16,8 @@
   --white: #fff;
   --green: #a99e66;
   --border-style: groove;
+  --box-sizing: border-box;
+  --text-decoration: none;
 }
 
 /*Hover effect from https://stackoverflow.com/questions/13781208/making-ahref-from-a-div*/
@@ -28,7 +30,7 @@ ul {
 
 #navbar-main {
   background-color: var(--white);
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   position: fixed;
   padding-bottom: 10px;
 }
@@ -62,7 +64,7 @@ header {
 header a {
   /*links in header*/
   color: var(--blue);
-  text-decoration: none;
+  text-decoration: var(--text-decoration);
 }
 
 nav a:hover {
@@ -76,16 +78,16 @@ nav a:hover {
 body {
   font-family: "JejuGothic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: auto;
-  max-width: 100%;
+  max-width: var(--max-width);
 }
 
 h1 {
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   display: inline-block;
   text-align: center;
   font-size: 1.5em;
   color: var(--blue);
-  padding: 10px; 
+  padding: 10px;
 }
 
 /*Home page - hero*/
@@ -93,7 +95,7 @@ h1 {
 /*slider learned from css-tricks*/
 
 .slider-container {
-  max-width: 100%;
+  max-width: var(--max-width);
   height: 700px;
   display: flex;
   overflow-y: auto;
@@ -101,7 +103,7 @@ h1 {
 }
 
 .slide {
-  max-width: 100%;
+  max-width: var(--max-width);
   flex-shrink: 0;
   height: 600px;
   scroll-snap-align: start;
@@ -110,9 +112,9 @@ h1 {
 
 #slide-1 {
   background-image: url("../images/manrunning.jpg");
-  background-size: cover;
+  background-size: var(--background-size);
   background-repeat: var(--background-repeat);
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   height: 700px;
   background-position: top 0px right 85%;
   width: 100%;
@@ -122,7 +124,7 @@ h1 {
   background-image: url("../images/hero-2.jpg");
   background-size: cover;
   background-repeat: var(--background-repeat);
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   height: 700px;
   background-position: bottom 0px left 10%;
   width: 100%;
@@ -132,7 +134,7 @@ h1 {
   background-image: url("../images/hero-3.jpg");
   background-size: cover;
   background-repeat: var(--background-repeat);
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   height: 700px;
   background-position: bottom 80% right 10%;
   width: 100%;
@@ -143,7 +145,7 @@ h1 {
 .cta {
   /*cta for all cta-buttons*/
   background-color: var(--white);
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   color: var(--blue);
   font-size: 15px;
   border-style: solid;
@@ -169,10 +171,10 @@ h1 {
 }
 
 #main-footer {
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   max-width: var(--min-width);
   padding: 50px;
-  max-width: 100%;
+  max-width: var(--max-width);
   text-align: center;
   background-color: var(--white);
   color: var(--blue);
@@ -182,10 +184,10 @@ h1 {
 .shop--women,
 .shop--men {
   display: flex;
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   background-image: url("../images/menshop.jpg");
   background-repeat: var(--background-repeat);
-  background-size: cover;
+  background-size: var(--background-size);
   width: 100%;
   height: 565px;
   margin: 0 auto;
@@ -194,12 +196,12 @@ h1 {
 .shop--women {
   background-image: url("../images/womenshop_resized.jpg");
   margin: 0px 0px 20px 0px;
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
 }
 
 .shop--all {
   background-image: url("../images/alljackets1.jpg");
-  background-size: cover;
+  background-size: var(--background-size);
   background-position: top 20% left 40%;
 }
 
@@ -209,7 +211,7 @@ h1 {
 .woman-hero-productlist,
 .man-hero-productlist {
   background-image: url("../images/manrunning.jpg");
-  background-size: cover;
+  background-size: var(--cover);
   background-repeat: var(--background-repeat);
   height: 700px;
   max-width: 100%;
@@ -222,7 +224,7 @@ h1 {
   background-image: url("../images/hero-3.jpg");
   max-height: 700px;
   background-position: top 0% left 20%;
-  max-width: 100%;
+  max-width: var(--max-width);
 }
 
 .allhero-big,
@@ -230,19 +232,19 @@ h1 {
   background-image: url("../images/hero-2.jpg");
   max-height: 1000px;
   background-position: top 50% left 20%;
-  max-width: 100%;
+  max-width: var(--max-width);
   min-height: 700px;
 }
 
 .product-hero-content {
   color: var(--white);
   display: inline-block;
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   padding: 450px 0px 0px 140px;
 }
 
 .product-hero-info_text {
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   display: inline-block;
   max-width: 85%;
   background-color: var(--blue);
@@ -260,14 +262,14 @@ h1 {
 
 .hero-alljackets {
   background-image: url("../images/hero3.jpg");
-  background-size: cover;
+  background-size: var(--background-size);
   background-repeat: var(--none);
   height: var(--height);
   min-width: var(--min-width);
 }
 
 .products-header {
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   margin: 0px 20px;
 }
 
@@ -275,7 +277,7 @@ h1 {
   display: inline-block;
   height: auto;
   max-width: 200px;
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   margin: 10px 0px 0px 50px;
 }
 
@@ -283,7 +285,7 @@ h1 {
 .flex-jacket {
   background-color: var(--white);
   height: 600px;
-  max-width: 100%;
+  max-width: var(--max-width);
   border-style: groove;
   border-color: var(--green);
   margin: 0px 10px 0px 10px;
@@ -320,22 +322,21 @@ p {
 .spesific-container {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   height: 800px;
   max-width: 300px;
-margin: 0 auto 30px; 
+  margin: 0 auto 30px;
 }
 
 .cart-info,
 .spesific-info h2 {
   padding: 10px 0px 0px 0px;
-  
 }
 
 .spesific-cta {
   width: 120px;
   display: inline-block;
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   margin: 20px auto 40px;
 }
 
@@ -360,19 +361,18 @@ p {
 .shopping-form {
   padding: 10px;
   width: 200px;
-  height: 600p;
+  height: 600px;
 }
 
 .cart-container {
   display: flex;
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   flex-direction: row;
   max-width: 600px;
   max-height: auto;
   border-style: groove;
   margin: 0 auto;
   padding-top: 20px;
-
 }
 
 .cart-image {
@@ -382,8 +382,6 @@ p {
   width: 700px;
   height: 200px;
   margin: 20px;
-  
-
 }
 
 .cart-info h2 p {
@@ -392,13 +390,14 @@ p {
 
 .qty,
 .product {
-margin: 30px 10px 0px 80px;
-  padding: 0px 10px 0px 10px; 
+  margin: 30px 10px 0px 80px;
+  padding: 0px 10px 0px 10px;
 }
+
 .cart-cta {
-  box-sizing: border-box;
-display: flex;  
-margin: 20px auto;
+  box-sizing: var(--box-sizing);
+  display: flex;
+  margin: 20px auto;
   padding: 20px 0px 20px 50px;
   font-size: 12px;
 }
@@ -410,11 +409,11 @@ margin: 20px auto;
 }
 
 .checkout-header h1 {
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   margin: 60px 10px 10px 10px;
 }
 
-.checkout-container{
+.checkout-container {
   display: flex;
   flex-direction: column;
   max-width: 300px;
@@ -434,8 +433,8 @@ margin: 20px auto;
 }
 
 .checkout-phurcase {
-  box-sizing: border-box;
-  max-width: 100%;
+  box-sizing: var(--box-sizing);
+  max-width: var(--max-width);
   margin: 10px 10px 10px 10px;
   padding: 10px 10px 10px 10px;
 }
@@ -450,9 +449,10 @@ margin: 20px auto;
 
 /*Checkout Success order complete*/
 
-.nav-icon-3{
+.nav-icon-3 {
   background-image: url("../icons/complete_dot.png");
 }
+
 .check-icon,
 .success-biglogo {
   background-image: url("../icons/RainyDays_logo1.png");
@@ -461,13 +461,13 @@ margin: 20px auto;
   background-repeat: var(--background-repeat);
   height: 100px;
   width: 200px;
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   margin: 30px auto 0px;
 }
 
 .success-content {
   display: grid;
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   max-width: 500px;
   text-align: center;
   margin: 0 auto;
@@ -478,7 +478,7 @@ margin: 20px auto;
   opacity: 100%;
   width: 50px;
   height: 50px;
-  margin: 60px auto; 
+  margin: 60px auto;
 }
 
 .success-text h2 p {
@@ -490,7 +490,7 @@ margin: 20px auto;
   margin: 60px auto 60px;
   display: inline-block;
   text-align: center;
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   padding: 20px 30px 20px 30px;
 }
 
@@ -501,14 +501,15 @@ margin: 20px auto;
   display: flex;
   flex-direction: column;
   max-width: 600px;
-border-style: none;
-margin: 0 auto;
+  border-style: none;
+  margin: 0 auto;
 }
+
 .contact-message {
-  display: inline-block
-  margin-top: 30px;
-  margin-bottom: 80px;
+  display: flex;
+  box-sizing: var(--box-sizing);
   max-width: 600px;
+  margin: 0 auto;
 }
 
 .contact-content1 {
@@ -525,19 +526,20 @@ margin: 0 auto;
   text-align: center;
   margin-top: 40px;
   margin-bottom: 30px;
-  color: #f27712;
+  color: var(--blue);
 }
 
 .img-map {
   background-image: url("../images/map.jpg");
-  background-size: cover;
+  background-size: var(--background-size);
   background-repeat: var(--background-repeat);
   min-height: 500px;
-  max-width: 100%;
+  max-width: var(--max-width);
   background-position: top 10px left 75%;
   margin-right: 10px;
   margin-left: 10px;
 }
+
 .store-info {
   background-image: url("../images/store-info.svg");
   background-size: contain;
@@ -546,17 +548,15 @@ margin: 0 auto;
   max-width: 100%;
   margin: 50px 0px 0px 0px;
   background-position: 60%;
-
 }
 
 /*about us*/
 
-
 .about-img {
   background-image: url("../images/aiguille-du-grepon-mont-blanc-massif\(1\).jpg");
-  background-size: cover;
+  background-size: var(--background-size);
   background-repeat: var(--background-repeat);
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   background-position: top 20px right 85%;
   display: flex;
   height: 900px;
@@ -606,7 +606,7 @@ margin: 0 auto;
 
   .smallheader {
     position: fixed;
-    box-sizing: border-box;
+    box-sizing: var(--box-sizing);
     padding: 10px 0px 20px 20px;
     height: 40px;
     width: 100%;
@@ -643,7 +643,7 @@ margin: 0 auto;
 
   .container1 {
     box-sizing: border-box;
-    max-width: 100%;
+    max-width: var(--max-width);
     max-height: auto;
   }
 
@@ -651,20 +651,21 @@ margin: 0 auto;
 
   a.small-productlist {
     display: inline-block;
-    max-width: 100%;
+    max-width: var(--max-width);
     text-decoration: none;
     color: var(--blue);
   }
 
   .small-jackets {
-    max-width: 80%;
+    box-sizing: border-box;
+    max-width: var(--max-width);
     margin: 0 auto;
   }
 
   .woman-hero-productlist {
     background-size: cover;
     background-repeat: var(--background-repeat);
-    box-sizing: border-box;
+    box-sizing: var(--box-sizing);
     height: 800px;
     background-position: top 50% right 10%;
     width: 100%;
@@ -675,12 +676,12 @@ margin: 0 auto;
   .small-nav-icon {
     width: 250px;
     height: 60px;
-  margin: 100px 100px 0px; 
-
+    margin: 100px 100px 0px;
   }
+
   .small-cart-container {
     display: grid;
-    box-sizing: border-box;
+    box-sizing: var(--box-sizing);
     max-height: 700px;
     max-width: 300px;
   }
@@ -689,6 +690,7 @@ margin: 0 auto;
     max-width: 200px;
     margin: 0 auto;
   }
+
   .small-cartinfo {
     max-width: 250px;
     margin: 0 auto;
@@ -696,19 +698,19 @@ margin: 0 auto;
 
   .small-qty,
   .small-product {
-  margin: 5px 100px;
-  padding: 0px 10px 0px 10px; 
+    margin: 5px 100px;
+    padding: 0px 10px 0px 10px;
   }
 
   /*about us*/
-  .small-aboutus-header{
+
+  .small-aboutus-header {
     margin: 100px 0px 0px 0px;
   }
 
-  .aboutinfo-small{
+  .aboutinfo-small {
     width: 250px;
     height: 400px;
-
   }
 }
 
@@ -752,7 +754,7 @@ margin: 0 auto;
   }
 
   .navlogo-big {
-    box-sizing: border-box;
+    box-sizing: var(--box-sizing);
     height: 50px;
     margin-top: 15px;
   }
@@ -769,45 +771,42 @@ margin: 0 auto;
   }
 
   .title h1 {
-    box-sizing: border-box;
-    display: inline-block; 
+    box-sizing: var(--box-sizing);
+    display: inline-block;
     align-items: center;
-    margin: 0 auto; 
-    max-width: 100%;
+    margin: 0 auto;
+    max-width: var(--max-width);
     min-height: auto;
   }
 
   /*shop men, women all jackets*/
 
   .big-container1 {
-    display: grid; 
-    grid-template-columns: repeat(2, 50%);  
-max-width: 100%;
-
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    max-width: var(--max-width);
   }
 
   .shop-big1 {
-    box-sizing: border-box;
+    box-sizing: var(--box-sizing);
     background-position: top 20% left 80%;
-    max-width: 100%;
+    max-width: var(--max-width);
     max-height: auto;
   }
 
   .shop-big2 {
-    box-sizing: border-box;
-    max-width: 100%;
+    box-sizing: var(--box-sizing);
+    max-width: var(--max-width);
     background-position: top 30% right 40%;
-    background-size: cover;
-
+    background-size: var(--background-size);
   }
 
   .shop-big3 {
-    box-sizing: border-box;
+    box-sizing: var(--box-sizing);
     display: inline-block;
-    max-width: 100%;
+    max-width: var(--max-width);
     max-height: auto;
     margin: 0;
-
   }
 
   .big-ctashop {
@@ -815,54 +814,52 @@ max-width: 100%;
   }
 
   .shopall-big {
-    box-sizing: border-box;
-    display:flex;
+    box-sizing: var(--box-sizing);
+    display: flex;
     padding: 20px 60px 20px;
-    margin: 400px 0px 0px 400px; 
- }
+    margin: 400px 0px 0px 400px;
+  }
 
   /*productlist jackets*/
 
   .womanhero-big,
   .manhero-big {
-    box-sizing: border-box;
-    max-width: 100%;
+    box-sizing: var(--box-sizing);
+    max-width: var(--max-width);
     max-height: 700px;
     background-position: bottom 85% right 0%;
     margin: 0px;
   }
 
   .productlist {
-    box-sizing: border-box;
+    box-sizing: var(--box-sizing);
     display: flex;
     text-decoration: none;
-    max-width: 100%;
+    max-width: var(--max-width);
     height: auto;
     color: var(--blue);
     margin: 20 auto;
   }
 
   .jacket-container {
-    box-sizing: border-box;
-    max-width: 100%;
+    box-sizing: var(--box-sizing);
+    max-width: var(--max-width);
     margin: 20px;
   }
 
   .jackets {
     display: inline-block;
-    max-width: 100%;
+    max-width: var(--max-width);
     margin: 0 auto;
   }
 
   .flex-jacket {
-    box-sizing: border-box;
+    box-sizing: var(--box-sizing);
     display: inline-block;
     background-color: var(--white);
     height: 600px;
-    max-width: 100%;
+    max-width: var(--max-width);
     border-style: groove;
     border-color: var(--green);
-
   }
-
 }

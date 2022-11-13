@@ -211,7 +211,7 @@ h1 {
   background-image: url("../images/manrunning.jpg");
   background-size: cover;
   background-repeat: var(--background-repeat);
-  height: 600px;
+  height: 700px;
   max-width: 100%;
   background-position: top 70px left 20%;
   margin: 0px 0px 30px;
@@ -238,7 +238,7 @@ h1 {
   color: var(--white);
   display: inline-block;
   box-sizing: border-box;
-  padding: 350px 0px 0px 140px;
+  padding: 450px 0px 0px 140px;
 }
 
 .product-hero-info_text {
@@ -411,7 +411,7 @@ margin: 20px auto;
 
 .checkout-header h1 {
   box-sizing: border-box;
-  margin: 10px 10px 10px 10px;
+  margin: 60px 10px 10px 10px;
 }
 
 .checkout-container{
@@ -448,7 +448,7 @@ margin: 20px auto;
   max-width: 50%;
 }
 
-/*Success order complete*/
+/*Checkout Success order complete*/
 
 .nav-icon-3{
   background-image: url("../icons/complete_dot.png");
@@ -456,7 +456,7 @@ margin: 20px auto;
 .check-icon,
 .success-biglogo {
   background-image: url("../icons/RainyDays_logo1.png");
-  opacity: 70%;
+  opacity: 100%;
   background-size: contain;
   background-repeat: var(--background-repeat);
   height: 100px;
@@ -564,9 +564,11 @@ margin: 0 auto;
 }
 
 .about-info {
-  margin: 400px 20px 200px 20px;
+  margin: 300px auto;
+  max-width: 500px;
+  height: 400px;
   background-color: rgba(255, 255, 255, 0.831);
-  padding: 50px 30px 350px 40px;
+  padding: 50px 30px 40px 40px;
   color: var(--blue);
 }
 
@@ -634,6 +636,7 @@ margin: 0 auto;
     width: 100px;
     left: 140px;
     top: 20px;
+    margin: 0px auto;
   }
 
   /*shop men, shop women, shop all jackets*/
@@ -646,8 +649,6 @@ margin: 0 auto;
 
   /*productlist mobile*/
 
- 
-
   a.small-productlist {
     display: inline-block;
     max-width: 100%;
@@ -657,7 +658,7 @@ margin: 0 auto;
 
   .small-jackets {
     max-width: 80%;
-margin: 0 auto;
+    margin: 0 auto;
   }
 
   .woman-hero-productlist {
@@ -697,6 +698,17 @@ margin: 0 auto;
   .small-product {
   margin: 5px 100px;
   padding: 0px 10px 0px 10px; 
+  }
+
+  /*about us*/
+  .small-aboutus-header{
+    margin: 100px 0px 0px 0px;
+  }
+
+  .aboutinfo-small{
+    width: 250px;
+    height: 400px;
+
   }
 }
 

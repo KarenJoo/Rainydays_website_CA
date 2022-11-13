@@ -211,7 +211,7 @@ h1 {
 .woman-hero-productlist,
 .man-hero-productlist {
   background-image: url("../images/manrunning.jpg");
-  background-size: var(--cover);
+  background-size: var(--background-size);
   background-repeat: var(--background-repeat);
   height: 700px;
   max-width: 100%;
@@ -223,6 +223,7 @@ h1 {
 .woman-hero-productlist {
   background-image: url("../images/hero-3.jpg");
   max-height: 700px;
+  background-size: var(--background-size);
   background-position: top 0% left 20%;
   max-width: var(--max-width);
 }
@@ -231,6 +232,7 @@ h1 {
 .alljackets-hero-productlist {
   background-image: url("../images/hero-2.jpg");
   max-height: 1000px;
+  background-size: var(--background-size);
   background-position: top 50% left 20%;
   max-width: var(--max-width);
   min-height: 700px;
@@ -410,7 +412,7 @@ p {
 
 .checkout-header h1 {
   box-sizing: var(--box-sizing);
-  margin: 60px 10px 10px 10px;
+  margin: 0px 10px 10px 10px;
 }
 
 .checkout-container {
@@ -810,14 +812,16 @@ p {
   }
 
   .big-ctashop {
+    box-sizing: var(--box-sizing);
     padding: 20px 0px 30px 90px;
+    margin: 440px auto;
   }
 
   .shopall-big {
     box-sizing: var(--box-sizing);
     display: flex;
     padding: 20px 60px 20px;
-    margin: 400px 0px 0px 400px;
+    margin: 440px auto;
   }
 
   /*productlist jackets*/

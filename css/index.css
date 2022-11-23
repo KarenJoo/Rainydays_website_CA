@@ -232,15 +232,12 @@ h1 {
   min-height: 700px;
 }
 
-.product-hero-content {
+.product-hero-content h2 {
   color: var(--white);
   display: inline-block;
   box-sizing: var(--box-sizing);
   padding: 450px 0px 0px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .product-hero-info_text {

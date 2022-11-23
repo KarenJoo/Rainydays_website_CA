@@ -24,7 +24,6 @@
 
 ul {
   list-style-type: none;
-  display: inline-block;
   margin: 20px 0px 0px 0px;
 }
 
@@ -58,7 +57,6 @@ header {
   background-color: var(--white);
   min-height: 85px;
   min-width: var(--min-width);
-  top: 10px;
 }
 
 header a {
@@ -147,14 +145,11 @@ h1 {
   background-color: var(--white);
   box-sizing: var(--box-sizing);
   color: var(--blue);
-  font-size: 15px;
   border-style: solid;
   border-width: 0.3ch;
   text-decoration: none;
   min-width: 250px;
   max-width: 250px;
-  font-size: 1em;
-  padding: 15px 0px 15px 60px;
 }
 
 .big-ctashop,
@@ -174,7 +169,6 @@ h1 {
   box-sizing: var(--box-sizing);
   max-width: var(--min-width);
   padding: 50px;
-  max-width: var(--max-width);
   text-align: center;
   background-color: var(--white);
   color: var(--blue);
@@ -184,13 +178,11 @@ h1 {
 .shop--women,
 .shop--men {
   display: flex;
-  box-sizing: var(--box-sizing);
   background-image: url("../images/menshop.jpg");
   background-repeat: var(--background-repeat);
   background-size: var(--background-size);
   width: 100%;
   height: 565px;
-  margin: 0 auto;
 }
 
 .shop--women {
@@ -216,7 +208,10 @@ h1 {
   height: 700px;
   max-width: 100%;
   background-position: top 70px left 20%;
-  margin: 0px 0px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .womanhero-big,
@@ -232,7 +227,6 @@ h1 {
 .alljackets-hero-productlist {
   background-image: url("../images/hero-2.jpg");
   max-height: 1000px;
-  background-size: var(--background-size);
   background-position: top 50% left 20%;
   max-width: var(--max-width);
   min-height: 700px;
@@ -242,7 +236,11 @@ h1 {
   color: var(--white);
   display: inline-block;
   box-sizing: var(--box-sizing);
-  padding: 450px 0px 0px 140px;
+  padding: 450px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-hero-info_text {
@@ -529,6 +527,10 @@ p {
   margin-top: 40px;
   margin-bottom: 30px;
   color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .img-map {
@@ -608,10 +610,8 @@ p {
 
   .smallheader {
     position: fixed;
-    box-sizing: var(--box-sizing);
     padding: 10px 0px 20px 20px;
     height: 40px;
-    width: 100%;
   }
 
   .burgericon {
@@ -624,7 +624,6 @@ p {
     height: 3px;
     background-color: var(--blue);
     margin-bottom: 4px;
-    position: flex;
     display: block;
   }
 
@@ -637,8 +636,13 @@ p {
     height: 70px;
     width: 100px;
     left: 140px;
-    top: 20px;
+    top: 10px;
     margin: 0px auto;
+  }
+
+  .cta-small {
+    margin: 450px auto;
+    padding: 20px 0px 30px 70px;
   }
 
   /*shop men, shop women, shop all jackets*/
@@ -646,7 +650,6 @@ p {
   .container1 {
     box-sizing: border-box;
     max-width: var(--max-width);
-    max-height: auto;
   }
 
   /*productlist mobile*/
@@ -848,7 +851,6 @@ p {
   .jacket-container {
     box-sizing: var(--box-sizing);
     max-width: var(--max-width);
-    margin: 20px;
   }
 
   .jackets {

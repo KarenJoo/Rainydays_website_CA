@@ -845,12 +845,15 @@ p {
     max-width: var(--max-width);
     height: auto;
     color: var(--blue);
-    margin: 20 auto;
+    margin-bottom: 10px;
   }
 
   .jacket-container {
     box-sizing: var(--box-sizing);
     max-width: var(--max-width);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .jackets {

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="The shoppingcart men of Rainydays." />
+    <meta name="description" content="The shopping cart page of Rainydays" />
     <link href="/css/index.css" rel="stylesheet" />
 
-    <title>Rainydays | Shopping cart</title>
+    <title>Rainydays | Shopping Cart</title>
   </head>
   <body>
     <header id="header-container" class="smallheader">
@@ -17,13 +17,12 @@
         <div class="menu-line"></div>
 </label> 
 <a class="logosmall" href="index.html"></a>        
-<a class="small-cart" href="../Rainydays_website_CA/ckeckout.html"></a></div>      
-
+<a class="small-cart" href="../Rainydays_website_CA/ckeckout.html"></a>     
       <nav id="navbar-main" class="navbar-small"> 
-        <div>
-          <a class="navlogo" href="index.html"></a>
+        <div class="logo-container">
+          <a class="navlogo navlogo-big" href="index.html"></a>
         </div>
-        <ul>
+        <ul class="ul-big">
           <li><a  href="men.html">MEN</a></li>
           <li><a  href="women.html">WOMEN</a></li>
           <li><a  href="alljackets.html">VIEW ALL</a></li>
@@ -32,31 +31,33 @@
         </ul>
       </nav>
     </header>
-    <main>           
-      <main>           
-        <div class="cart-header title">
-        </div>
-          <h1>SHOPPING CART</h1></div>
-         <section class="cart-container">
-              <div class="cart-image"></div>          
-               <div class="cart-info">
-                <h2>1 orange jacket</h2>
-                <p>product info about the orange jacket. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <form class="shopping-form" action="form-success.php" method="POST">
-                  <legend class="qty">QTY</legend>
-                  <select name="product">
-                    <option value="product-one">1</option>
-                    <option value="product-two">2</option>
-                    <option value="product-three">3</option>
-                    <option value="product-four">4</option>
-                    <option value="product-four">5</option>
-                  </select>
-                </form>
-          </div>            
-      </section>           
-      <a href="checkout.html" class="cta cart-cta">CONTINUE TO PAYMENT</a>
-
-<footer id="main-footer">&copy; copyright</footer>
+<main>             
+  <div class="nav-icon-1"></div>        
+  <div class="title">
+    <h1>SHOPPING CART</h1>
+  </div>
+  <section class="cart-container small-cart-container">
+    <div class="cart-image small-cart-image"></div>
+    <div class="cart-info small-cartinfo">
+      <h2>Triclimate Waterproof Jacket</h2>
+      <p>Our best-selling technical jacket. Made for long days in the mountain, hiking and summits for autumn and winter season, or just chilling on a cold weather day.</p> 
+      <p>The Triclimate Jacket uses a water-repellent treatment, warm yet light Eco Insulation and TECH Professional construction.</p>
+      <h2>358,98 EUR</h2>          
+    </div> 
+  <form class="shopping-form" action="form-success.php" method="POST">
+    <legend class="qty small-qty">QTY</legend>
+      <select name="product" class="product small-product">
+        <option value="product-one">1</option>
+        <option value="product-two">2</option>
+        <option value="product-three">3</option>
+        <option value="product-four">4</option>
+        <option value="product-four">5</option>
+      </select>
+  </form> 
+ </section> 
+    <a href="checkout.html" class="cta cart-cta">CONTINUE TO PAYMENT</a>
+</main>
+<footer id="main-footer">&copy; copyright 2022</footer>
 </body>
 </html>
 

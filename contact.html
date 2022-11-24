@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="The homepage of Rainydays." />
+    <meta name="description" content="The contact page of Rainydays" />
     <link href="/css/index.css" rel="stylesheet" />
 
-    <title>Rainydays | Home</title>
+    <title>Rainydays | Contact</title>
   </head>
   <body>
     <header id="header-container" class="smallheader">
@@ -17,18 +17,17 @@
         <div class="menu-line"></div>
 </label> 
 <a class="logosmall" href="index.html"></a>        
-<a class="small-cart" href="../Rainydays_website_CA/ckeckout.html"></a></div>      
-
+<a class="small-cart" href="../Rainydays_website_CA/ckeckout.html"></a>     
       <nav id="navbar-main" class="navbar-small"> 
-        <div>
-          <a class="navlogo" href="index.html"></a>
+        <div class="logo-container">
+          <a class="navlogo navlogo-big" href="index.html"></a>
         </div>
-        <ul>
+        <ul class="ul-big">
           <li><a  href="men.html">MEN</a></li>
           <li><a  href="women.html">WOMEN</a></li>
           <li><a  href="alljackets.html">VIEW ALL</a></li>
           <li><a  href="aboutus.html">about us</a></li>
-          <li><a  href="contact.html" class="active">contact</a></li>
+          <li><a  href="contact.html" class="current">contact</a></li>
         </ul>
       </nav>
     </header>
@@ -38,7 +37,7 @@
         </div> 
         <section class="contact-content1">
        <p>Email: rainydays@company.com </p>
-<p>Phone: (888) 862-1888</p>
+        <p>Phone: (888) 862-1888</p>
         <p>Monday-Friday: 7:00am - 7:00pm(CST)</p>
         <p>Visit our stores</p>
         <p>Monday-Friday: 10:00am - 7:00pm(CST)</p>
@@ -48,7 +47,7 @@
       </section>
     <form action="form-success.php" method="POST">
       <fieldset class="contact-form">
-        <legend>Your details</legend>
+        <h3>Your details</h3>
         <label for="name">Your name</label>
         <input type="text" name="name" id="name" class="form__input" required/>
         <label for="phone">Your phone number</label>
@@ -58,18 +57,19 @@
       </fieldset>
      
       <fieldset class="contact-message">
-        <legend>Write your message here</legend>
+        <h3>Write your message here</h3>
 <label for="message" name="message"></label>
 <textarea id="message" name="message"></textarea>
 <input type="submit" value="send message" required>
 </fieldset>
 <section class="message-header">
   <h2>Find our stores</h2>
+  </section>
   <div class="store-info"></div>
-  <div class="img-map"></div>
+  <div class="img-map" alt="map of Rainydays stores based in New York"></div>
       </select>
     </form>
   </main>
-  <footer id="main-footer">&copy; copyright</footer>
+  <footer id="main-footer">&copy; copyright 2022</footer>
 </body>
 </html>

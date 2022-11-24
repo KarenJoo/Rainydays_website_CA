@@ -11,31 +11,37 @@
   --min-width: 100%;
   --max-width: 600px;
   --min-height: auto;
+  --max-height: auto;
+  --max-width: 100%;
   --blue: #0a3641;
   --white: #fff;
-  --orange: #f27712;
+  --green: #a99e66;
+  --border-style: groove;
+  --box-sizing: border-box;
+  --text-decoration: none;
 }
+
+/*Hover effect from https://stackoverflow.com/questions/13781208/making-ahref-from-a-div*/
 
 ul {
   list-style-type: none;
-  display: inline-block;
+  margin: 20px 0px 0px 0px;
 }
 
 #navbar-main {
   background-color: var(--white);
-  box-sizing: border-box;
-  position: absolute;
-  padding: 10px;
+  box-sizing: var(--box-sizing);
+  position: fixed;
+  padding-bottom: 10px;
 }
 
 li {
   display: inline-block;
-  padding: 10px 30px 0px 0px;
+  padding: 10px 20px 0px 0px;
 }
 
 nav {
   left: 0px;
-  width: 200px;
   position: fixed;
   display: flex;
   width: var(--min-width);
@@ -45,41 +51,42 @@ nav {
   font-size: 1rem;
   box-sizing: border-box;
   width: 100%;
+  max-height: 10px;
 }
 
 header {
   background-color: var(--white);
-  min-height: 80px;
+  min-height: 85px;
   min-width: var(--min-width);
-  top: 10px;
 }
 
 header a {
   /*links in header*/
   color: var(--blue);
-  background-color: var(--white);
-  text-decoration: none;
+  text-decoration: var(--text-decoration);
 }
 
 nav a:hover {
-  color: var(--orange);
+  color: var(--green);
 }
 
 .active {
-  color: var(--orange);
+  color: var(--green);
 }
 
 body {
   font-family: "JejuGothic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0px;
-  width: var(--min-width);
+  margin: auto;
+  max-width: var(--max-width);
 }
 
 h1 {
-  box-sizing: border-box;
-  font-size: 70px;
-  color: #f27712;
-  min-width: 350px; 
+  box-sizing: var(--box-sizing);
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5em;
+  color: var(--blue);
+  padding: 10px;
 }
 
 /*Home page - hero*/
@@ -87,113 +94,111 @@ h1 {
 /*slider learned from css-tricks*/
 
 .slider-container {
-  max-width: 100%;
-  height: 800px;
+  max-width: var(--max-width);
+  height: 700px;
   display: flex;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
   scroll-snap-type: x mandatory;
 }
 
 .slide {
-  max-width: 100%;
+  max-width: var(--max-width);
   flex-shrink: 0;
-  height: 100%;
+  height: 600px;
   scroll-snap-align: start;
+  margin-top: 70px;
 }
 
 #slide-1 {
   background-image: url("../images/manrunning.jpg");
-  background-size: cover;
+  background-size: var(--background-size);
   background-repeat: var(--background-repeat);
-  box-sizing: border-box;
-  height: 800px;
-  background-position: top 60px right 85%;
-  min-width: 100%;
+  box-sizing: var(--box-sizing);
+  height: 700px;
+  background-position: top 0px right 85%;
+  width: 100%;
 }
 
 #slide-2 {
   background-image: url("../images/hero-2.jpg");
   background-size: cover;
   background-repeat: var(--background-repeat);
-  box-sizing: border-box;
-  height: 800px;
+  box-sizing: var(--box-sizing);
+  height: 700px;
   background-position: bottom 0px left 20%;
-  min-width: 100%;
+  width: 100%;
 }
 
 #slide-3 {
-  background-image: url("../images/hero3.jpg");
+  background-image: url("../images/hero-3.jpg");
   background-size: cover;
   background-repeat: var(--background-repeat);
-  box-sizing: border-box;
-  height: 800px;
-  background-position: bottom 30% right 10%;
+  box-sizing: var(--box-sizing);
+  height: 700px;
+  background-position: bottom 80% right 10%;
   width: 100%;
 }
 
 .view-button,
-.cta__shop,
+.cta-shop,
 .cta {
   /*cta for all cta-buttons*/
-  background-color: var(--orange);
-  color: var(--white);
+  background-color: var(--white);
+  box-sizing: var(--box-sizing);
+  color: var(--blue);
+  border-style: solid;
+  border-width: 0.3ch;
   text-decoration: none;
-  font-size: 1em;
-  padding: 15px 50px 15px 50px;
+  min-width: 250px;
+  max-width: 250px;
+}
+
+.big-ctashop,
+.cta-shop {
+  display: inline-block;
+  font-size: 13px;
+  padding: 20px 10px 30px 80px;
+  margin: 430px 150px;
+}
+
+.complete-cta {
+  display: flex;
+  margin: 70px auto;
+  padding: 20px 0px 20px 60px;
 }
 
 #main-footer {
+  box-sizing: var(--box-sizing);
   max-width: var(--min-width);
-  padding: 40px;
-  max-width: 100%;
+  padding: 50px;
   text-align: center;
   background-color: var(--white);
   color: var(--blue);
 }
 
-.container1 {
-  width: var(--min-width);
-}
-
-.cta__shop {
-  display: inline-block;
-  margin-top: 500px;
-  margin-left: 140px;
-}
+.shop--all,
+.shop--women,
 .shop--men {
+  display: flex;
   background-image: url("../images/menshop.jpg");
   background-repeat: var(--background-repeat);
-  min-width: var(--min-width);
-  height: 600px;
-  background-position: top 0px right 55%;
+  background-size: var(--background-size);
+  width: 100%;
+  height: 565px;
 }
 
 .shop--women {
   background-image: url("../images/womenshop_resized.jpg");
-  background-size: cover;
-  background-repeat: var(--background-repeat);
-  min-width: var(--min-width);
-  height: 620px;
+  margin: 0px 0px 20px 0px;
+  box-sizing: var(--box-sizing);
 }
 
 .shop--all {
   background-image: url("../images/alljackets1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-width: var(--min-width);
-  height: 450px;
-  margin: 10px 0px 50px 0px;
-}
-
-.small {
-  margin-top: 330px;
+  background-size: var(--background-size);
+  background-position: top 20% left 40%;
   margin-left: 110px;
-  background-color: var(--white);
-  color: var(--orange);
 
-  border-style: solid;
-  border-width: 0.3ch;
 }
 
 /*productlist*/
@@ -202,38 +207,49 @@ h1 {
 .woman-hero-productlist,
 .man-hero-productlist {
   background-image: url("../images/manrunning.jpg");
-  background-size: cover;
+  background-size: var(--background-size);
   background-repeat: var(--background-repeat);
-  height: 600px;
-  min-width: var(--min-width);
+  height: 700px;
+  max-width: 100%;
   background-position: top 70px left 20%;
-  margin: 0px 0px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+.womanhero-big,
 .woman-hero-productlist {
-  background-image: url("../images/hero3.jpg");
+  background-image: url("../images/hero-3.jpg");
   max-height: 700px;
-  background-position: top 100px left 20%;
+  background-size: var(--background-size);
+  background-position: top 0% left 20%;
+  max-width: var(--max-width);
 }
 
+.allhero-big,
 .alljackets-hero-productlist {
   background-image: url("../images/hero-2.jpg");
+  max-height: 1000px;
+  background-position: top 50% left 20%;
+  max-width: var(--max-width);
   min-height: 700px;
-  background-position: bottom 0px left 30%;
-  margin-top: 40px;
 }
 
-.product-hero-content {
+.product-hero-content h2 {
   color: var(--white);
   display: inline-block;
-  padding: 400px 0px 0px 180px;
+  box-sizing: var(--box-sizing);
+  padding: 450px 0px 0px 0px;
+  text-align: center;
 }
 
 .product-hero-info_text {
-  margin: 0px 40px 0px 0px;
+  box-sizing: var(--box-sizing);
   display: inline-block;
+  max-width: 85%;
   background-color: var(--blue);
-  padding: 15px 15px 10px 20px;
+  padding: 15px 25px 10px 20px;
   color: var(--white);
 }
 
@@ -247,187 +263,237 @@ h1 {
 
 .hero-alljackets {
   background-image: url("../images/hero3.jpg");
-  background-size: cover;
+  background-size: var(--background-size);
   background-repeat: var(--none);
   height: var(--height);
   min-width: var(--min-width);
 }
 
 .products-header {
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   margin: 0px 20px;
 }
 
-.productlist {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  max-width: 1000px;
-  margin: 30px;
+.image-jackets {
+  display: inline-block;
+  height: auto;
+  max-width: 200px;
+  box-sizing: var(--box-sizing);
+  margin: 10px 0px 0px 50px;
 }
 
-.mens-productlist img {
-  min-width: var(--min-width);
-  min-height: var(--min-height);
-}
-
+/*product content*/
 .flex-jacket {
   background-color: var(--white);
-  width: 300px;
-  height: 500px;
+  height: 600px;
+  max-width: var(--max-width);
   border-style: groove;
-  border-color: #0a36411c;
-  margin: 0px 0px 0px 20px;
+  border-color: var(--green);
+  margin: 0px 10px 0px 10px;
+  padding: 30px 0px 0px 40px;
 }
 
-.img__jacket {
-  width: 200px;
-  height: auto;
-  margin: 10px 50px;
+.flex-jacket:hover {
+  box-shadow: #a99e66;
+  border-style: solid;
+  border-color: #f27712;
 }
 
 .product-info__h2 {
-  margin: 0px 0px 0px 10px;
-  text-align: center;
+  text-align: left;
   font-size: 12px;
+  text-align: left;
 }
 
 .view-button {
-  padding: 15px 50px 15px 50px;
-  margin: 10px 30px 0px 30px;
+  padding: 15px 0px 15px 70px;
+  margin: 30px 50px 40px 0px;
   display: inline-block;
   font-size: 15px;
-}
-
-.product-info {
-  font-size: 16px;
-  width: 200px;
-  margin: 10px 60px;
 }
 
 p {
   font-size: 12px;
   display: inline-block;
-  text-align: center;
+  text-align: left;
 }
 
 /*site spesific*/
-.spesific-header {
-  position: flex;
-  padding: 100px 50px 10px;
-}
+
 .spesific-container {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  box-sizing: var(--box-sizing);
   height: 800px;
-  max-width: 600px;
-  padding: 10px 60px;
+  max-width: 300px;
+  margin: 0 auto 30px;
 }
 
-.spesific-jacket {
-  background-color: var(--white);
-  width: 80px;
-  height: auto;
-}
-
-.spesific-info {
+.cart-info,
+.spesific-info h2 {
   padding: 10px 0px 0px 0px;
 }
 
 .spesific-cta {
   width: 120px;
   display: inline-block;
-  margin: 20px 0px 0px 0px;
+  box-sizing: var(--box-sizing);
+  margin: 20px auto 40px;
+  padding: 20px 0px 20px 60px;
 }
 
 /*shopping cart*/
-.cart-header {
-  position: flex;
-  padding: 100px 80px 10px;
-}
-.cart-container {
-  display: flex;
-  margin: 30px auto;
-  min-height: 400px;
-  max-width: 100%;
-  font-size: 12px;
-}
-
-.cart-image {
-  background-image: url("../images/RainyDays_1jacketsmall.jpg");
-  background-size: contain;
-  background-repeat: var(--background-repeat);
-  display: flex;
-  height: 500px;
-  width: 400px;
-}
-
-.cart-info {
-  margin: 1px;
-  display: flex;
-  flex-direction: column;
-}
 
 p {
   text-align: left;
 }
 
-.qty {
-  padding: 60px 0px 0px 0px;
+.nav-icon-3,
+.nav-icon-2,
+.nav-icon-1 {
+  background-image: url("../icons/shopping_dot.png");
+  width: 250px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: var(--background-repeat);
+  display: flex;
+  margin: 150px auto 0px auto;
 }
+
 .shopping-form {
   padding: 10px;
   width: 200px;
-  height: auto;
+  height: 600px;
 }
+
+.cart-container {
+  display: flex;
+  box-sizing: var(--box-sizing);
+  flex-direction: row;
+  max-width: 600px;
+  max-height: auto;
+  border-style: groove;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.cart-image {
+  background-image: url("../images/RainyDays_1jacket.jpg");
+  background-size: contain;
+  background-repeat: var(--background-repeat);
+  width: 700px;
+  height: 200px;
+  margin: 20px;
+}
+
+.cart-info h2 p {
+  max-width: 80px;
+}
+
+.qty,
+.product {
+  margin: 30px 10px 0px 80px;
+  padding: 0px 10px 0px 10px;
+}
+
 .cart-cta {
-  box-sizing: border-box;
-  position: absolute;
-  top: 600px;
-  right: 90px;
+  box-sizing: var(--box-sizing);
+  display: flex;
+  margin: 20px auto;
+  padding: 20px 0px 20px 50px;
   font-size: 12px;
 }
 
 /*checkout*/
 
+.nav-icon-2 {
+  background-image: url("../icons/payment_dot.png");
+}
+
 .checkout-header h1 {
-  box-sizing: border-box;
-  margin: 100px 10px;
+  box-sizing: var(--box-sizing);
+  margin: 0px 10px 10px 10px;
+}
+
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  max-height: auto;
+  border-style: var(--border-style);
+  border-color: var(--green);
+  align-items: center;
+  margin: 0 auto;
 }
 
 .checkout-form {
   display: flex;
   flex-direction: column;
+  border: none;
   max-width: 600px;
-  margin: 20px 20px 20px 30px;
+  margin: 20px auto;
 }
 
 .checkout-phurcase {
-  max-width: 300px;
-  padding: 0px;
-  margin: 0px 10px 30px 20px;
+  box-sizing: var(--box-sizing);
+  max-width: var(--max-width);
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
 }
 
-/*Success order complete*/
+.submit {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px;
+  margin: 0 auto;
+  max-width: 50%;
+}
 
+/*Checkout Success order complete*/
+
+.nav-icon-3 {
+  background-image: url("../icons/complete_dot.png");
+}
+
+.check-icon,
 .success-biglogo {
   background-image: url("../icons/RainyDays_logo1.png");
+  opacity: 100%;
   background-size: contain;
   background-repeat: var(--background-repeat);
-  height: 200px;
+  height: 100px;
   width: 200px;
-  display: flex;
+  box-sizing: var(--box-sizing);
+  margin: 30px auto 0px;
 }
 
 .success-content {
-  padding: 100px;
   display: grid;
-  justify-content: space-between;
+  box-sizing: var(--box-sizing);
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.success-header h2 {
-  box-sizing: border-box;
-  margin: 180px 0px 0px 100px;
-  color: var(--orange);
+.check-icon {
+  background-image: url("../icons/check.png");
+  opacity: 100%;
+  width: 50px;
+  height: 50px;
+  margin: 60px auto;
+}
+
+.success-text h2 p {
+  margin: 0 auto;
+  padding: 0px 0px 100px 10px;
+}
+
+.success-cta {
+  margin: 60px auto 60px;
+  display: inline-block;
+  text-align: center;
+  box-sizing: var(--box-sizing);
+  padding: 20px 30px 20px 30px;
 }
 
 /*contact us*/
@@ -437,14 +503,15 @@ p {
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  margin: 20px 20px 0px 30px;
+  border-style: none;
+  margin: 0 auto;
 }
+
 .contact-message {
   display: flex;
-  box-sizing: border-box;
-  margin-top: 30px;
-  margin-bottom: 50px;
+  box-sizing: var(--box-sizing);
   max-width: 600px;
+  margin: 0 auto;
 }
 
 .contact-content1 {
@@ -454,46 +521,49 @@ p {
   background-color: #0a36411b;
 }
 
-
+.h3,
+.products__h1,
+.title,
 .message-header {
   text-align: center;
-  margin-top: 100px;
-  margin-bottom: 40px;
-  color: #f27712;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .img-map {
-  background-image: url("../images/map.png");
-  background-size: cover;
+  background-image: url("../images/map.jpg");
+  background-size: var(--background-size);
   background-repeat: var(--background-repeat);
   min-height: 500px;
-  max-width: 100%;
+  max-width: var(--max-width);
   background-position: top 10px left 75%;
   margin-right: 10px;
   margin-left: 10px;
 }
+
 .store-info {
   background-image: url("../images/store-info.svg");
-  background-size: cover;
-  min-height: 300px;
-  max-width: 400px;
-  background-position: top 20px left 75%;
-  margin: 50px 10px 50px 50px;
+  background-size: contain;
+  background-repeat: var(--background-repeat);
+  min-height: 250px;
+  margin: 50px 0px 0px 0px;
+  background-position: 60%;
 }
 
 /*about us*/
 
-.about {
-  margin: 100px 0px 0px 70px;
   max-width: 600px;
   max-height: 600px;
-}
-
 .about-img {
-  background-image: url("../images/aboutus-img.jpg");
-  background-size: cover;
+  background-image: url("../images/aiguille-du-grepon-mont-blanc-massif\(1\).jpg");
+  background-size: var(--background-size);
   background-repeat: var(--background-repeat);
-  box-sizing: border-box;
+  box-sizing: var(--box-sizing);
   background-position: top 20px right 85%;
   display: flex;
   height: 900px;
@@ -501,16 +571,18 @@ p {
 }
 
 .about-info {
-  margin: 400px 20px 200px 20px;
+  margin: 300px auto;
+  max-width: 500px;
+  height: 400px;
   background-color: rgba(255, 255, 255, 0.831);
-  padding: 50px 30px 400px 40px;
+  padding: 50px 30px 40px 40px;
   color: var(--blue);
   max-width: 600px;
 }
 
 /*mobile screen*/
 
-@media screen and (min-width: 320px) and (max-width: 600px) {
+@media screen and (min-width: 300px) and (max-width: 600px) {
   nav,
   #navbar-main,
   #menu-checkbox {
@@ -544,15 +616,6 @@ p {
     position: fixed;
     padding: 10px 0px 20px 20px;
     height: 40px;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .small-cart {
-    display: flex;
-    box-sizing: border-box;
-    top: 20px;
-    right: 50px;
   }
 
   .burgericon {
@@ -565,7 +628,6 @@ p {
     height: 3px;
     background-color: var(--blue);
     margin-bottom: 4px;
-    position: flex;
     display: block;
   }
 
@@ -578,53 +640,92 @@ p {
     height: 70px;
     width: 100px;
     left: 140px;
-    top: 20px;
+    top: 10px;
+    margin: 0px auto;
   }
 
-  .cta-hero1 {
-    background-color: #ffffff90;
-    color: var(--blue);
-    text-decoration: none;
-    font-size: 1em;
-    border-style: solid;
-    border-color: var(--white);
-    padding: 20px 90px 20px 90px;
+  .cta-small {
+    margin: 450px auto;
+    padding: 20px 0px 30px 70px;
   }
-  .cta-hero2 {
-    background-color: #ffffff90;
-    color: var(--blue);
-    text-decoration: none;
-    font-size: 1em;
-    border-style: solid;
-    border-color: var(--white);
-    padding: 30px 75px 20px 75px;
+
+  /*shop men, shop women, shop all jackets*/
+
+  .container1 {
+    box-sizing: border-box;
+    max-width: var(--max-width);
   }
 
   /*productlist mobile*/
 
-  .small-productlist {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
-    max-width: 100%;
-    margin: 0px 10px 0px;
-    align-items: center;
-    padding: 30px 30px;
+  a.small-productlist {
+    display: inline-block;
+    max-width: var(--max-width);
+    text-decoration: none;
+    color: var(--blue);
+  }
+
+  .small-jackets {
+    box-sizing: border-box;
+    max-width: var(--max-width);
+    margin: 0 auto;
   }
 
   .woman-hero-productlist {
     background-size: cover;
     background-repeat: var(--background-repeat);
-    box-sizing: border-box;
+    box-sizing: var(--box-sizing);
     height: 800px;
     background-position: top 50% right 10%;
     width: 100%;
+  }
+
+  /*shopping cart*/
+
+  .small-nav-icon {
+    width: 250px;
+    height: 60px;
+    margin: 100px 100px 0px;
+  }
+
+  .small-cart-container {
+    display: grid;
+    box-sizing: var(--box-sizing);
+    max-height: 700px;
+    max-width: 300px;
+  }
+
+  .small-cart-image {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .small-cartinfo {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .small-qty,
+  .small-product {
+    margin: 5px 100px;
+    padding: 0px 10px 0px 10px;
+  }
+
+  /*about us*/
+
+  .small-aboutus-header {
+    margin: 100px 0px 0px 0px;
+  }
+
+  .aboutinfo-small {
+    width: 250px;
+    height: 400px;
   }
 }
 
 /*DESKTOP*/
 
-@media (min-width: 600px) and (max-width: 3572px) {
+@media (min-width: 600px) {
   /*navigation*/
 
   .navlogo {
@@ -632,10 +733,15 @@ p {
     background-color: var(--white);
     background-size: contain;
     background-repeat: var(--background-repeat);
-    height: 70px;
-    width: 150px;
+    width: 40px;
     display: flex;
     margin: 0px 50px 0px;
+  }
+
+  .ul-big {
+    box-sizing: border-box;
+    display: block;
+    max-width: 80%;
   }
 
   .logosmall,
@@ -649,36 +755,123 @@ p {
 
   nav a {
     /*hover links*/
-    display: block;
     min-width: var(--min-width);
   }
 
-  .bigcart {
-    box-sizing: border-box;
-    width: 100%;
-    height: auto;
-    top: 10px;
-    right: 20px;
+  .logo-container {
+    display: inline-block;
   }
 
-  .container1-big {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    min-width: var(--min-width);
+  .navlogo-big {
+    box-sizing: var(--box-sizing);
+    height: 50px;
+    margin-top: 15px;
+  }
+
+  .slidebig {
+    margin: 0;
+  }
+
+  .cta-alljackets {
+    display: inline-block;
+    padding: 20px 0px 20px 50px;
+    margin: 450px 0px 0px 250px;
+    font-size: 12px;
+  }
+
+  .title h1 {
+    box-sizing: var(--box-sizing);
+    display: inline-block;
+    align-items: center;
+    margin: 0 auto;
+    max-width: var(--max-width);
     min-height: auto;
   }
 
-  .header-big {
-    padding: 0px 0px 0px 300px;
-    max-width: var(--max-width)
+  /*shop men, women all jackets*/
+
+  .big-container1 {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    max-width: var(--max-width);
   }
 
-  /*about us*/
+  .shop-big1 {
+    box-sizing: var(--box-sizing);
+    background-position: top 20% left 80%;
+    max-width: var(--max-width);
+    max-height: auto;
+  }
 
-  .about-info,
-  .aboutbig {
-    width: 100%;
-    margin: 20% 30%;
+  .shop-big2 {
+    box-sizing: var(--box-sizing);
+    max-width: var(--max-width);
+    background-position: top 30% right 40%;
+    background-size: var(--background-size);
+  }
+
+  .shop-big3 {
+    box-sizing: var(--box-sizing);
+    display: inline-block;
+    max-width: var(--max-width);
+    max-height: auto;
+    margin: 0;
+  }
+
+  .big-ctashop {
+    box-sizing: var(--box-sizing);
+    padding: 20px 0px 30px 90px;
+    margin: 440px auto;
+  }
+
+  .shopall-big {
+    box-sizing: var(--box-sizing);
+    padding: 20px 60px 20px;
+    margin: 440px auto;
+  }
+
+  /*productlist jackets*/
+
+  .womanhero-big,
+  .manhero-big {
+    box-sizing: var(--box-sizing);
+    max-width: var(--max-width);
+    max-height: 700px;
+    background-position: bottom 85% right 0%;
+    margin: 0px;
+  }
+
+  .productlist {
+    box-sizing: var(--box-sizing);
+    display: flex;
+    text-decoration: none;
+    max-width: var(--max-width);
+    height: auto;
+    color: var(--blue);
+    margin-bottom: 10px;
+  }
+
+  .jacket-container {
+    box-sizing: var(--box-sizing);
+    max-width: var(--max-width);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .jackets {
+    display: inline-block;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .flex-jacket {
+    box-sizing: var(--box-sizing);
+    display: inline-block;
+    background-color: var(--white);
+    height: 600px;
+    max-width: var(--max-width);
+    border-style: groove;
+    border-color: var(--green);
   }
 }

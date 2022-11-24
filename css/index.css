@@ -163,6 +163,7 @@ h1 {
 .complete-cta {
   display: flex;
   margin: 70px auto;
+  padding: 20px 0px 20px 60px;
 }
 
 #main-footer {
@@ -335,6 +336,7 @@ p {
   display: inline-block;
   box-sizing: var(--box-sizing);
   margin: 20px auto 40px;
+  padding: 20px 0px 20px 60px;
 }
 
 /*shopping cart*/

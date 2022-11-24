@@ -9,6 +9,7 @@
   --background-repeat: no-repeat;
   --height: 650px;
   --min-width: 100%;
+  --max-width: 600px;
   --min-height: auto;
   --max-height: auto;
   --max-width: 100%;
@@ -69,7 +70,7 @@ nav a:hover {
   color: var(--green);
 }
 
-.current {
+.active {
   color: var(--green);
 }
 
@@ -124,7 +125,7 @@ h1 {
   background-repeat: var(--background-repeat);
   box-sizing: var(--box-sizing);
   height: 700px;
-  background-position: bottom 0px left 10%;
+  background-position: bottom 0px left 20%;
   width: 100%;
 }
 
@@ -196,6 +197,8 @@ h1 {
   background-image: url("../images/alljackets1.jpg");
   background-size: var(--background-size);
   background-position: top 20% left 40%;
+  margin-left: 110px;
+
 }
 
 /*productlist*/
@@ -548,13 +551,14 @@ p {
   background-size: contain;
   background-repeat: var(--background-repeat);
   min-height: 250px;
-  max-width: 100%;
   margin: 50px 0px 0px 0px;
   background-position: 60%;
 }
 
 /*about us*/
 
+  max-width: 600px;
+  max-height: 600px;
 .about-img {
   background-image: url("../images/aiguille-du-grepon-mont-blanc-massif\(1\).jpg");
   background-size: var(--background-size);
@@ -573,6 +577,7 @@ p {
   background-color: rgba(255, 255, 255, 0.831);
   padding: 50px 30px 40px 40px;
   color: var(--blue);
+  max-width: 600px;
 }
 
 /*mobile screen*/
@@ -821,7 +826,6 @@ p {
 
   .shopall-big {
     box-sizing: var(--box-sizing);
-    display: flex;
     padding: 20px 60px 20px;
     margin: 440px auto;
   }

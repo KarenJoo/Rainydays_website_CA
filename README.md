@@ -20,7 +20,7 @@ When delivering this project I am not satisfied with my final CA, concidering al
 
 ### Executing program
 
-- Netlify: https://marvelous-elf-096d52.netlify.app/
+- Netlify: 
 - GitHub repo: https://github.com/KarenJoo/Rainydays_website_CA.git
 - figma prototypes: https://www.figma.com/file/YYvkGKAFFLnAzZLPncpAPG/Design1_FP_KarenJoFiksdahl?node-id=385%3A424&t=j8XIFoIS2I5FzB1M-1
 

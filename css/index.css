@@ -557,8 +557,6 @@ p {
 
 /*about us*/
 
-  max-width: 600px;
-  max-height: 600px;
 .about-img {
   background-image: url("../images/aiguille-du-grepon-mont-blanc-massif\(1\).jpg");
   background-size: var(--background-size);
@@ -774,8 +772,8 @@ p {
 
   .cta-alljackets {
     display: inline-block;
-    padding: 20px 0px 20px 50px;
-    margin: 450px 0px 0px 250px;
+    padding: 40px 0px 20px 50px;
+    margin: 450px 0px 0px 250px;  
     font-size: 12px;
   }
 
@@ -828,6 +826,8 @@ p {
     box-sizing: var(--box-sizing);
     padding: 20px 60px 20px;
     margin: 440px auto;
+    display: flex;
+    justify-content: center;
   }
 
   /*productlist jackets*/

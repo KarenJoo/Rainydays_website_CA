@@ -760,10 +760,18 @@ p {
     display: inline-block;
   }
 
+  
   .navlogo-big {
+    background-image: url("../icons/RainyDays_logo1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    height: 70px;
+    width: 90px;
     box-sizing: var(--box-sizing);
-    height: 50px;
-    margin-top: 15px;
+   
   }
 
   .slidebig {

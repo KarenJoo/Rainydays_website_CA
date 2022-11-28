@@ -236,6 +236,16 @@ h1 {
   min-height: 700px;
 }
 
+.productlist {
+  box-sizing: var(--box-sizing);
+  display: flex;
+  text-decoration: none;
+  max-width: var(--max-width);
+  height: auto;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
 .product-hero-content h2 {
   color: var(--white);
   display: inline-block;
@@ -849,15 +859,7 @@ p {
     margin: 0px;
   }
 
-  .productlist {
-    box-sizing: var(--box-sizing);
-    display: flex;
-    text-decoration: none;
-    max-width: var(--max-width);
-    height: auto;
-    color: var(--blue);
-    margin-bottom: 10px;
-  }
+
 
   .jacket-container {
     box-sizing: var(--box-sizing);
